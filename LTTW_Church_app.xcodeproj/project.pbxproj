@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		922389C821FBF38E00B51A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922389C721FBF38E00B51A1B /* Assets.xcassets */; };
 		92B0D2B921FBE97D00C4D299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */; };
 		92B0D2BB21FBE97D00C4D299 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0D2BA21FBE97D00C4D299 /* ViewController.swift */; };
 		92B0D2BE21FBE97D00C4D299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B0D2BC21FBE97D00C4D299 /* Main.storyboard */; };
-		92B0D2C021FBE98100C4D299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B0D2BF21FBE98100C4D299 /* Assets.xcassets */; };
 		92B0D2C321FBE98100C4D299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B0D2C121FBE98100C4D299 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		922389C721FBF38E00B51A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92B0D2B521FBE97D00C4D299 /* LTTW_Church_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTTW_Church_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92B0D2BA21FBE97D00C4D299 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92B0D2BD21FBE97D00C4D299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		92B0D2BF21FBE98100C4D299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92B0D2C221FBE98100C4D299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92B0D2C421FBE98100C4D299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,8 +57,8 @@
 				92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */,
 				92B0D2BA21FBE97D00C4D299 /* ViewController.swift */,
 				92B0D2BC21FBE97D00C4D299 /* Main.storyboard */,
-				92B0D2BF21FBE98100C4D299 /* Assets.xcassets */,
 				92B0D2C121FBE98100C4D299 /* LaunchScreen.storyboard */,
+				922389C721FBF38E00B51A1B /* Assets.xcassets */,
 				92B0D2C421FBE98100C4D299 /* Info.plist */,
 			);
 			path = LTTW_Church_app;
@@ -123,7 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B0D2C321FBE98100C4D299 /* LaunchScreen.storyboard in Resources */,
-				92B0D2C021FBE98100C4D299 /* Assets.xcassets in Resources */,
+				922389C821FBF38E00B51A1B /* Assets.xcassets in Resources */,
 				92B0D2BE21FBE97D00C4D299 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

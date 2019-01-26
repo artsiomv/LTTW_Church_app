@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,53 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main Page Whole View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0s-Kl-NHh" userLabel="Top Nav Bar View">
+                                <rect key="frame" x="0.0" y="44" width="375" height="32.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujn-fP-RfC" userLabel="Main Nav Bar Label">
+                                        <rect key="frame" x="162.66666666666666" y="5.6666666666666643" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-bar-black" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egR-pq-Ja8">
+                                        <rect key="frame" x="10" y="0.0" width="32.333333333333336" height="32.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="egR-pq-Ja8" secondAttribute="height" multiplier="30:30" id="Hsp-Jp-PLK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ujn-fP-RfC" firstAttribute="centerX" secondItem="q0s-Kl-NHh" secondAttribute="centerX" id="Fka-De-fLJ"/>
+                                    <constraint firstItem="egR-pq-Ja8" firstAttribute="leading" secondItem="q0s-Kl-NHh" secondAttribute="leading" constant="10" id="UBS-gr-6DC"/>
+                                    <constraint firstItem="ujn-fP-RfC" firstAttribute="centerY" secondItem="q0s-Kl-NHh" secondAttribute="centerY" id="c2o-vk-ENX"/>
+                                    <constraint firstItem="egR-pq-Ja8" firstAttribute="height" secondItem="q0s-Kl-NHh" secondAttribute="height" id="hfn-br-5cK"/>
+                                    <constraint firstItem="egR-pq-Ja8" firstAttribute="centerY" secondItem="q0s-Kl-NHh" secondAttribute="centerY" id="yMF-Fd-ZAC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q0s-Kl-NHh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.04" id="50b-bE-EBc"/>
+                            <constraint firstAttribute="trailing" secondItem="q0s-Kl-NHh" secondAttribute="trailing" id="8zX-lf-hNZ"/>
+                            <constraint firstItem="q0s-Kl-NHh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Pdh-xc-a3g"/>
+                            <constraint firstItem="q0s-Kl-NHh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="acJ-EV-imc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-bar-black" width="67.5" height="67.5"/>
+    </resources>
 </document>
