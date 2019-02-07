@@ -10,9 +10,6 @@ import UIKit
 
 class MenuNavigation: UIViewController {
 
-    @IBAction func HomeButton(_ sender: Any) {
-        self.
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
