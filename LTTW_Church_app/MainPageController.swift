@@ -13,7 +13,8 @@ class MainPageController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet private weak var collectionView: UICollectionView!
     
     
-    var collectionData = ["1", "2", "3", "4", "5", "6", "7"]
+    var collectionData = ["1", "2", "3"] // 3/7 enabled
+    var cellCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +28,18 @@ class MainPageController: UIViewController, UICollectionViewDataSource, UICollec
         return collectionData.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! MyCollectionViewCell
-//        if let label = cell.viewWithTag(100) as? UILabel {
-//            label.text = collectionData[indexPath.row]
-//            label.text = "HI"
-//        }
-        //HERE I WILL CHANGE THE LABELS AND PICTURES FOR THE COLLECTION VIEWS
-        cell.myLabel.text = "HI"
         
+        
+        
+        //HERE I WILL CHANGE THE LABELS AND PICTURES FOR THE COLLECTION VIEWS
+        cell.myImage.image = UIImage(named: "pic\(cellCounter+1)")
+        cellCounter += 1
+        if cellCounter == 1 { cell.myLabel.text = "MESSAGES" }
+        else if cellCounter == 2 { cell.myLabel.text = "LIVE" }
+        else if cellCounter ==  3 { cell.myLabel.text = "EVENTS" }
         
         
         return cell

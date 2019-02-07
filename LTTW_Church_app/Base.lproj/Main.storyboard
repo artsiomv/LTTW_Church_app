@@ -70,12 +70,12 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-hw-ElG" userLabel="myImage">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-hw-ElG" userLabel="myImage">
                                                             <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIP-Vi-vsb" userLabel="myLabel">
-                                                            <rect key="frame" x="64.333333333333329" y="75" width="41.666666666666671" height="20.333333333333329"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="GIP-Vi-vsb" userLabel="myLabel">
+                                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -85,13 +85,16 @@
                                                 <constraints>
                                                     <constraint firstItem="HHe-hw-ElG" firstAttribute="leading" secondItem="cs9-ww-YI9" secondAttribute="leading" id="6Nw-Qg-mWj"/>
                                                     <constraint firstAttribute="bottom" secondItem="HHe-hw-ElG" secondAttribute="bottom" id="AEd-oS-Kab"/>
+                                                    <constraint firstAttribute="bottom" secondItem="GIP-Vi-vsb" secondAttribute="bottom" id="Ei7-0G-nHr"/>
                                                     <constraint firstAttribute="trailing" secondItem="HHe-hw-ElG" secondAttribute="trailing" id="OUZ-Qy-WVT"/>
-                                                    <constraint firstItem="GIP-Vi-vsb" firstAttribute="centerX" secondItem="cs9-ww-YI9" secondAttribute="centerX" id="UFb-5F-mAV"/>
-                                                    <constraint firstItem="GIP-Vi-vsb" firstAttribute="centerY" secondItem="cs9-ww-YI9" secondAttribute="centerY" id="aJu-53-FgI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GIP-Vi-vsb" secondAttribute="trailing" id="SwI-sv-OPv"/>
                                                     <constraint firstItem="HHe-hw-ElG" firstAttribute="top" secondItem="cs9-ww-YI9" secondAttribute="top" id="dyh-DI-EjM"/>
+                                                    <constraint firstItem="GIP-Vi-vsb" firstAttribute="leading" secondItem="cs9-ww-YI9" secondAttribute="leading" id="gpe-AW-ma0"/>
+                                                    <constraint firstItem="GIP-Vi-vsb" firstAttribute="top" secondItem="cs9-ww-YI9" secondAttribute="top" id="yUJ-M3-XYg"/>
                                                 </constraints>
                                                 <size key="customSize" width="170" height="170"/>
                                                 <connections>
+                                                    <outlet property="myImage" destination="HHe-hw-ElG" id="F87-yw-b4Y"/>
                                                     <outlet property="myLabel" destination="GIP-Vi-vsb" id="48o-OR-yqa"/>
                                                 </connections>
                                             </collectionViewCell>
