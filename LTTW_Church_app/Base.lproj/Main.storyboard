@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Page Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tDB-5Z-ith">
             <objects>
-                <viewController id="SgP-RC-7O2" customClass="MainPageController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SgP-RC-7O2" customClass="MainViewController" customModule="LTTW_Church_app" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P4O-MM-Gid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="Menu Button" image="menu-white" landscapeImage="menu-white" id="3yr-0J-xUP">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="DAc-xj-IkC" kind="presentation" identifier="SideMenu" animates="NO" modalPresentationStyle="overCurrentContext" id="CBK-WU-FxW"/>
+                                                <segue destination="DAc-xj-IkC" kind="presentation" modalPresentationStyle="overCurrentContext" id="dTc-8a-uyn"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -53,8 +53,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oty-Ll-dxZ">
                                 <rect key="frame" x="0.0" y="291" width="375" height="521"/>
                                 <subviews>
-                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SMk-XU-xgt">
-                                        <rect key="frame" x="10" y="10" width="355" height="501"/>
+                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SMk-XU-xgt">
+                                        <rect key="frame" x="20" y="20" width="335" height="481"/>
                                         <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ps9-Hh-LGB">
                                             <size key="itemSize" width="50" height="50"/>
@@ -64,7 +64,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionViewCell" id="cs9-ww-YI9" customClass="MyCollectionViewCell" customModule="LTTW_Church_app" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                <rect key="frame" x="82.666666666666671" y="0.0" width="170" height="170"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
@@ -75,7 +75,7 @@
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="GIP-Vi-vsb" userLabel="myLabel">
                                                             <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="23"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -107,10 +107,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="SMk-XU-xgt" firstAttribute="top" secondItem="oty-Ll-dxZ" secondAttribute="top" constant="10" id="YEc-gj-tts"/>
-                                    <constraint firstAttribute="trailing" secondItem="SMk-XU-xgt" secondAttribute="trailing" constant="10" id="bxB-bG-DLa"/>
-                                    <constraint firstAttribute="bottom" secondItem="SMk-XU-xgt" secondAttribute="bottom" constant="10" id="ivs-5q-yQp"/>
-                                    <constraint firstItem="SMk-XU-xgt" firstAttribute="leading" secondItem="oty-Ll-dxZ" secondAttribute="leading" constant="10" id="tNc-gN-T2J"/>
+                                    <constraint firstItem="SMk-XU-xgt" firstAttribute="top" secondItem="oty-Ll-dxZ" secondAttribute="top" constant="20" id="YEc-gj-tts"/>
+                                    <constraint firstAttribute="trailing" secondItem="SMk-XU-xgt" secondAttribute="trailing" constant="20" id="bxB-bG-DLa"/>
+                                    <constraint firstAttribute="bottom" secondItem="SMk-XU-xgt" secondAttribute="bottom" constant="20" id="ivs-5q-yQp"/>
+                                    <constraint firstItem="SMk-XU-xgt" firstAttribute="leading" secondItem="oty-Ll-dxZ" secondAttribute="leading" constant="20" id="tNc-gN-T2J"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -151,145 +151,27 @@
                                 <subviews>
                                     <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6o-TA-LMr">
                                         <rect key="frame" x="0.0" y="44" width="244" height="44"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <items>
                                             <navigationItem id="bXy-dt-9W9">
-                                                <barButtonItem key="leftBarButtonItem" title="Item" image="BlackBackButton" id="y4n-UR-0D6">
+                                                <barButtonItem key="leftBarButtonItem" title="ArrowBack" image="arrowBackWhite" id="y4n-UR-0D6">
                                                     <connections>
-                                                        <segue destination="SgP-RC-7O2" kind="presentation" identifier="Back" animates="NO" id="c5p-XN-99B"/>
+                                                        <segue destination="SgP-RC-7O2" kind="presentation" identifier="Back" modalTransitionStyle="crossDissolve" id="c5p-XN-99B"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IaL-s8-5Hy">
-                                        <rect key="frame" x="0.0" y="88" width="243.66666666666666" height="318"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4s-kU-ngx">
-                                                <rect key="frame" x="0.0" y="0.0" width="243.66666666666666" height="29"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiO-0I-XSC">
-                                                <rect key="frame" x="0.0" y="29" width="243.66666666666666" height="28.666666666666671"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="8zr-F9-yhA">
-                                                <rect key="frame" x="0.0" y="57.666666666666657" width="243.66666666666666" height="29"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4bv-D9-1Dy">
-                                                <rect key="frame" x="0.0" y="86.666666666666657" width="243.66666666666666" height="29"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlackBackButton" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-yP-4nj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="29"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMe-A4-TIc">
-                                                        <rect key="frame" x="76.999999999999986" y="0.0" width="166.66666666666663" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8uL-do-e3N">
-                                                <rect key="frame" x="0.0" y="115.66666666666666" width="243.66666666666666" height="29"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlackHome" translatesAutoresizingMaskIntoConstraints="NO" id="8h3-qm-KbP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="29"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C18-uS-UqG">
-                                                        <rect key="frame" x="86.999999999999986" y="0.0" width="156.66666666666663" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="zxt-hk-mu2">
-                                                <rect key="frame" x="0.0" y="144.66666666666666" width="243.66666666666666" height="28.666666666666657"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPR-b3-K8h">
-                                                        <rect key="frame" x="0.0" y="0.0" width="22.333333333333332" height="28.666666666666668"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlW-mN-pbL">
-                                                        <rect key="frame" x="22.333333333333329" y="0.0" width="221.33333333333337" height="28.666666666666668"/>
-                                                        <state key="normal" image="BlackHome">
-                                                            <attributedString key="attributedTitle">
-                                                                <fragment content="     Home">
-                                                                    <attributes>
-                                                                        <font key="NSFont" size="18" name="ArialMT"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="frh-Wi-P9J">
-                                                <rect key="frame" x="0.0" y="173.33333333333331" width="243.66666666666666" height="29"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlackBackButton" translatesAutoresizingMaskIntoConstraints="NO" id="M69-sd-Y73">
-                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="29"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65a-hJ-LNI">
-                                                        <rect key="frame" x="86.999999999999986" y="0.0" width="156.66666666666663" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RVS-Gd-K6I">
-                                                <rect key="frame" x="0.0" y="202.33333333333331" width="243.66666666666666" height="29"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlackHome" translatesAutoresizingMaskIntoConstraints="NO" id="15s-Qn-Cva">
-                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="29"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCR-mc-oUY">
-                                                        <rect key="frame" x="86.999999999999986" y="0.0" width="156.66666666666663" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uzW-ZA-TRE">
-                                                <rect key="frame" x="0.0" y="231.33333333333331" width="243.66666666666666" height="29"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlackHome" translatesAutoresizingMaskIntoConstraints="NO" id="g3g-a0-UTk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="29"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEW-JY-NBh">
-                                                        <rect key="frame" x="86.999999999999986" y="0.0" width="156.66666666666663" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-B7-2Yl">
-                                                <rect key="frame" x="0.0" y="260.33333333333331" width="243.66666666666666" height="28.666666666666686"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTq-h9-IdC">
-                                                <rect key="frame" x="0.0" y="289" width="243.66666666666666" height="29"/>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="IaL-s8-5Hy" firstAttribute="leading" secondItem="MNw-h3-m9Q" secondAttribute="leading" id="8qr-8t-vGl"/>
-                                    <constraint firstItem="IaL-s8-5Hy" firstAttribute="top" secondItem="S6o-TA-LMr" secondAttribute="bottom" id="MhF-Pe-f6I"/>
-                                    <constraint firstItem="IaL-s8-5Hy" firstAttribute="bottom" secondItem="MNw-h3-m9Q" secondAttribute="bottom" multiplier="0.5" id="VKy-d0-lEP"/>
-                                    <constraint firstItem="IaL-s8-5Hy" firstAttribute="trailing" secondItem="MNw-h3-m9Q" secondAttribute="trailing" id="lHt-GD-BBd"/>
                                     <constraint firstAttribute="trailing" secondItem="S6o-TA-LMr" secondAttribute="trailing" constant="-0.33000000000000002" id="oBZ-Rt-DAO"/>
                                     <constraint firstItem="S6o-TA-LMr" firstAttribute="leading" secondItem="MNw-h3-m9Q" secondAttribute="leading" id="pB9-iE-L98"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="0.49518407534246578" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MNw-h3-m9Q" firstAttribute="width" secondItem="Qxk-ea-c5w" secondAttribute="width" multiplier="0.65" id="0BL-xf-065"/>
                             <constraint firstItem="S6o-TA-LMr" firstAttribute="top" secondItem="pPE-Hk-RMb" secondAttribute="top" id="7A2-U7-E8D"/>
@@ -301,18 +183,256 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="HomeItem" destination="4bv-D9-1Dy" id="1g0-Dw-XbR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vio-qk-EPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3701.5999999999999" y="-112.89355322338831"/>
+            <point key="canvasLocation" x="3367" y="-607"/>
+        </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="nbi-YD-NKD">
+            <objects>
+                <viewController storyboardIdentifier="MessagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2jo-0u-MKE" customClass="MessagesViewController" customModule="LTTW_Church_app" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yoR-Xo-VEs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjH-z5-Yz6">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="MESSAGES" id="XrE-fv-DdX">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="Menu Button" image="arrowBackWhite" id="Q9w-xo-t8h" userLabel="Back Button">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <segue destination="SgP-RC-7O2" kind="presentation" modalTransitionStyle="crossDissolve" id="kcr-Zl-xtn"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Menu" image="menu-white" id="Xee-vZ-tbe">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cjH-z5-Yz6" firstAttribute="leading" secondItem="yoR-Xo-VEs" secondAttribute="leading" id="FVZ-7d-ixU"/>
+                            <constraint firstAttribute="trailing" secondItem="cjH-z5-Yz6" secondAttribute="trailing" id="IgO-37-uiM"/>
+                            <constraint firstItem="cjH-z5-Yz6" firstAttribute="top" secondItem="EmT-6q-ihy" secondAttribute="top" id="yoh-i5-4Fi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EmT-6q-ihy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plw-B5-LpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3706" y="109"/>
+        </scene>
+        <!--Events View Controller-->
+        <scene sceneID="AJy-ez-vOQ">
+            <objects>
+                <viewController storyboardIdentifier="EventsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5qa-G6-Lq4" customClass="EventsViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DM8-ga-jmd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOE-4W-alZ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="EVENTS" id="YiP-TR-fXI">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="RU5-Qj-399">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="SgP-RC-7O2" kind="presentation" modalTransitionStyle="crossDissolve" id="jWx-8l-Whr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mOE-4W-alZ" firstAttribute="leading" secondItem="DM8-ga-jmd" secondAttribute="leading" id="QUj-Ab-WvL"/>
+                            <constraint firstAttribute="trailing" secondItem="mOE-4W-alZ" secondAttribute="trailing" id="V6x-iQ-Xc4"/>
+                            <constraint firstItem="mOE-4W-alZ" firstAttribute="top" secondItem="JuM-LE-K48" secondAttribute="top" id="wkl-9R-GOU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JuM-LE-K48"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdP-VB-Xhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4437" y="105"/>
+        </scene>
+        <!--Notes View Controller-->
+        <scene sceneID="c44-nW-hxQ">
+            <objects>
+                <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p9M-7x-tco" customClass="NotesViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q3T-Hd-zpu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceK-ip-9Wa">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="NOTES" id="3m1-jg-K8e">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="aqZ-6l-XSN">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="SgP-RC-7O2" kind="presentation" modalTransitionStyle="crossDissolve" id="zjj-K3-JWp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ceK-ip-9Wa" secondAttribute="trailing" id="7DW-5o-pRX"/>
+                            <constraint firstItem="ceK-ip-9Wa" firstAttribute="top" secondItem="pbm-zu-YzI" secondAttribute="top" id="9jb-O6-fNb"/>
+                            <constraint firstItem="ceK-ip-9Wa" firstAttribute="leading" secondItem="q3T-Hd-zpu" secondAttribute="leading" id="h5j-AQ-BGb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pbm-zu-YzI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="594-B9-MaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3705" y="781"/>
+        </scene>
+        <!--Bible View Controller-->
+        <scene sceneID="3z6-1Y-Xlj">
+            <objects>
+                <viewController storyboardIdentifier="BibleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="li7-AY-fra" customClass="BibleViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rxw-ue-mJg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvx-4i-TMn">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="BIBLE" id="oSR-J4-nkb">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="32q-wE-Dmy">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="SgP-RC-7O2" kind="presentation" modalTransitionStyle="crossDissolve" id="hPv-fn-ho2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wvx-4i-TMn" secondAttribute="trailing" id="CUg-Hy-cbK"/>
+                            <constraint firstItem="Wvx-4i-TMn" firstAttribute="top" secondItem="gWK-gK-W6u" secondAttribute="top" id="i9F-hf-fFx"/>
+                            <constraint firstItem="Wvx-4i-TMn" firstAttribute="leading" secondItem="Rxw-ue-mJg" secondAttribute="leading" id="p08-kC-jsT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gWK-gK-W6u"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8R-BP-Pp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4436" y="780"/>
+        </scene>
+        <!--Get Involved View Controller-->
+        <scene sceneID="khB-5p-RzL">
+            <objects>
+                <viewController storyboardIdentifier="GetInvolvedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x7n-SB-czv" customClass="GetInvolvedViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vvo-iZ-fBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXr-de-VCF">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="GET INVOLVED" id="Mri-rg-pTn">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="Dwg-r3-1HK">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="SgP-RC-7O2" kind="presentation" modalTransitionStyle="crossDissolve" id="wm6-CU-SnJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rXr-de-VCF" firstAttribute="top" secondItem="rSd-Dq-OPJ" secondAttribute="top" id="TF5-Ib-gXh"/>
+                            <constraint firstItem="rXr-de-VCF" firstAttribute="leading" secondItem="Vvo-iZ-fBL" secondAttribute="leading" id="dQj-R1-GwS"/>
+                            <constraint firstAttribute="trailing" secondItem="rXr-de-VCF" secondAttribute="trailing" id="gOE-iV-Hjb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rSd-Dq-OPJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyS-BU-DeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3705" y="1459"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="WoB-IN-u3q">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="goc-OS-FP7" customClass="AboutUsViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZmK-Hj-R3z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATT-OZ-dQL">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ABOUT US" id="5Ch-qe-Brq">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="LdL-dv-Mgq">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="SgP-RC-7O2" kind="presentation" modalTransitionStyle="crossDissolve" id="UrV-Pw-DtK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ATT-OZ-dQL" firstAttribute="leading" secondItem="ZmK-Hj-R3z" secondAttribute="leading" id="1k8-Xq-zDC"/>
+                            <constraint firstItem="ATT-OZ-dQL" firstAttribute="top" secondItem="6Dx-wB-2ip" secondAttribute="top" id="7F5-5C-x5d"/>
+                            <constraint firstAttribute="trailing" secondItem="ATT-OZ-dQL" secondAttribute="trailing" id="J1b-ga-mKC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Dx-wB-2ip"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjb-PG-fzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4436" y="1459"/>
         </scene>
     </scenes>
     <resources>
-        <image name="BlackBackButton" width="67.5" height="67.5"/>
-        <image name="BlackHome" width="67.5" height="67.5"/>
+        <image name="arrowBackWhite" width="180" height="180"/>
         <image name="menu-white" width="162" height="162"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="c5p-XN-99B"/>
+    </inferredMetricsTieBreakers>
 </document>
