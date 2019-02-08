@@ -10,10 +10,17 @@ import UIKit
 
 class MessagesViewController: UIViewController {
 
+    @IBOutlet weak var myView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+//        myView.layer.shadowColor = UIColor.green.cgColor
+//        myView.layer.shadowOffset = CGSize(width: 0, height: -10)
+//        myView.layer.shadowOpacity = 0.6
+//        myView.layer.shadowRadius = 10.0
+//        myView.layer.shadowPath = UIBezierPath(rect: myView.bounds).cgPath
+//        myView.layer.shouldRasterize = true
     }
     
 

@@ -9,7 +9,6 @@
 import UIKit
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
     @IBOutlet private weak var collectionView: UICollectionView!
     
     
@@ -19,9 +18,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let width = (view.frame.size.width - 60) / 2
+        let width = (view.frame.size.width)
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: width)
+        layout.itemSize = CGSize(width: width, height: 150)
+        
+        
+       
+//        let shadow = collectionView.layer
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -31,10 +34,35 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! MyCollectionViewCell
+        print(indexPath)
+//        cell.myShadow.backgroundColor = UIColor.green
+//
+        cell.printsomething()
+        
+//        cell.myShadow.layer.shadowColor = UIColor.green.cgColor
+//        cell.myShadow.layer.shadowOffset = .zero
+//        cell.myShadow.layer.shadowOpacity = 0.6
+//        cell.myShadow.layer.shadowRadius = 10.0
+//        cell.myShadow.layer.shadowPath = UIBezierPath(rect: cell.myShadow.bounds).cgPath
+//        cell.myShadow.layer.shouldRasterize = true
+        
+        
+        //cell.myShadow.layer.masksToBounds =  false
+        //cell.myShadow.layer.shadowOpacity = 1
+        //cell.myShadow.layer.shadowOffset = CGSize(width: 1, height: 1)
+        //cell.myShadow.layer.shadowRadius = 15
+        //cell.myShadow.layer.shadowColor = UIColor.red.cgColor
+        
+        
+        
         
         //HERE I WILL CHANGE THE LABELS AND PICTURES FOR THE COLLECTION VIEWS
         cell.myImage.image = UIImage(named: "pic\(cellCounter+1)")
         cell.myLabel.text = collectionData[cellCounter]
+        
+        
+        
+        
         
         cellCounter += 1
         
