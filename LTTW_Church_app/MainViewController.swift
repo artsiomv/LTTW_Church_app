@@ -2,78 +2,57 @@
 //  MainViewController.swift
 //  LTTW_Church_app
 //
-//  Created by Artiom on 2/6/19.
+//  Created by Artiom on 2/7/19.
 //  Copyright © 2019 Artiom. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    @IBOutlet private weak var collectionView: UICollectionView!
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
+    @IBOutlet weak var tableView: UITableView!
     var collectionData = ["MESSAGES", "EVENTS", "NOTES", "BIBLE", "GET INVOLVED", "ABOUT US"]
-    var cellCounter = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let width = (view.frame.size.width)
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: 150)
-        
-        
-       
-//        let shadow = collectionView.layer
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return collectionData.count
     }
     
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! MyCollectionViewCell
-        print(indexPath)
-//        cell.myShadow.backgroundColor = UIColor.green
-//
-        cell.printsomething()
+    //Here is to change pictures, labels, shadows for each of the rows on main page
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        cell.myShadow.layer.shadowColor = UIColor.green.cgColor
-//        cell.myShadow.layer.shadowOffset = .zero
-//        cell.myShadow.layer.shadowOpacity = 0.6
-//        cell.myShadow.layer.shadowRadius = 10.0
-//        cell.myShadow.layer.shadowPath = UIBezierPath(rect: cell.myShadow.bounds).cgPath
-//        cell.myShadow.layer.shouldRasterize = true
+        //create and object cell from MyTableViewCell.swift
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)  as! MyTableViewCell
         
+        //CHANGE THE LABELS AND PICTURES FOR THE COLLECTION VIEWS
+        cell.myImage!.image = UIImage(named: "pic\(indexPath.row+1)")
+        cell.myLabel.text = collectionData[indexPath.row]
         
-        //cell.myShadow.layer.masksToBounds =  false
-        //cell.myShadow.layer.shadowOpacity = 1
-        //cell.myShadow.layer.shadowOffset = CGSize(width: 1, height: 1)
-        //cell.myShadow.layer.shadowRadius = 15
-        //cell.myShadow.layer.shadowColor = UIColor.red.cgColor
-        
-        
-        
-        
-        //HERE I WILL CHANGE THE LABELS AND PICTURES FOR THE COLLECTION VIEWS
-        cell.myImage.image = UIImage(named: "pic\(cellCounter+1)")
-        cell.myLabel.text = collectionData[cellCounter]
-        
-        
-        
-        
-        
-        cellCounter += 1
-        
+        //draw a shadow on the bottow of each row, called from MyTableViewCell.swift
+        cell.drawShadow()
         
         return cell
     }
+    
+    //change hte first row to be larger and keep everything separate
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0{
+            return 250.0
+        }
+        return 170.0
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+    
+    //handle onTap events for each row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // handle tap events
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
+        //open the correct view on each tap on home page
         if indexPath.row == 0 {
             let messagesViewController = storyBoard.instantiateViewController(withIdentifier: "MessagesViewController") as! MessagesViewController
             self.present(messagesViewController, animated: true, completion: nil)
@@ -94,7 +73,15 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.present(aboutUsViewController, animated: true, completion: nil)
         }
     }
-    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-
