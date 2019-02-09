@@ -101,20 +101,21 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="LGn-Rc-Vgw" userLabel="myImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuw-B7-R41" userLabel="myLabel">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPQ-8R-AOM" userLabel="myShadow">
                                                     <rect key="frame" x="-50" y="170" width="475" height="85"/>
                                                     <color key="backgroundColor" white="1" alpha="0.20055650680000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuw-B7-R41" userLabel="myLabel">
+                                                    <rect key="frame" x="0.0" y="135" width="375" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="Mzl-nE-3HF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Tuw-B7-R41" secondAttribute="bottom" id="Ijf-WH-ljP"/>
-                                                <constraint firstItem="Tuw-B7-R41" firstAttribute="top" secondItem="ImB-vy-PhA" secondAttribute="top" id="adG-rg-iGk"/>
                                                 <constraint firstItem="TPQ-8R-AOM" firstAttribute="top" secondItem="ImB-vy-PhA" secondAttribute="bottom" id="e55-Pt-fCE"/>
                                                 <constraint firstItem="TPQ-8R-AOM" firstAttribute="leading" secondItem="ImB-vy-PhA" secondAttribute="leading" constant="-50" id="fco-cH-uol"/>
                                                 <constraint firstItem="Tuw-B7-R41" firstAttribute="leading" secondItem="ImB-vy-PhA" secondAttribute="leading" id="noh-bC-8sz"/>
@@ -125,6 +126,7 @@
                                         <constraints>
                                             <constraint firstItem="LGn-Rc-Vgw" firstAttribute="top" secondItem="zaH-ND-n9Z" secondAttribute="top" id="4tz-IS-9ob"/>
                                             <constraint firstItem="LGn-Rc-Vgw" firstAttribute="leading" secondItem="zaH-ND-n9Z" secondAttribute="leading" id="AJQ-mB-7ER"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tuw-B7-R41" secondAttribute="bottom" id="JjZ-KE-Qaa"/>
                                             <constraint firstItem="LGn-Rc-Vgw" firstAttribute="width" secondItem="zaH-ND-n9Z" secondAttribute="width" id="Szv-06-635"/>
                                             <constraint firstItem="LGn-Rc-Vgw" firstAttribute="height" secondItem="zaH-ND-n9Z" secondAttribute="height" id="bkd-fJ-NwC"/>
                                             <constraint firstItem="TPQ-8R-AOM" firstAttribute="height" secondItem="zaH-ND-n9Z" secondAttribute="height" multiplier="0.5" id="c0v-UC-q1L"/>

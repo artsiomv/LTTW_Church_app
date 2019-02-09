@@ -23,7 +23,7 @@ class MyTableViewCell: UITableViewCell {
         
         myShadow.layer.shadowOffset = CGSize(width: 0, height: -20)
         myShadow.layer.shadowOpacity = 1
-        myShadow.layer.shadowRadius = 5.0
+        myShadow.layer.shadowRadius = 10.0
         myShadow.layer.shadowPath = UIBezierPath(rect: myShadow.bounds).cgPath
         myShadow.layer.shouldRasterize = true
     }
