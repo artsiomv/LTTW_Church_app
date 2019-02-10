@@ -217,7 +217,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuw-B7-R41" userLabel="myLabel">
                                                     <rect key="frame" x="0.0" y="135" width="375" height="35"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="Mzl-nE-3HF"/>
+                                                        <constraint firstAttribute="height" constant="35" id="u3q-oh-PSD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -307,6 +307,9 @@
                                     <navigationItem title="EVENTS" id="YiP-TR-fXI">
                                         <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="RU5-Qj-399">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="2jo-0u-MKE" kind="custom" id="A4X-OK-LdU"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -478,6 +481,6 @@
         <image name="pic1" width="6720" height="4480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="48g-SD-IX9"/>
+        <segue reference="A4X-OK-LdU"/>
     </inferredMetricsTieBreakers>
 </document>

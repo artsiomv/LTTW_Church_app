@@ -11,6 +11,8 @@
 		9209EF21220F7FD600046787 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209EF20220F7FD600046787 /* MenuTableViewCell.swift */; };
 		9222902B220BA55C00162D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9222902A220BA55B00162D6A /* Assets.xcassets */; };
 		922389F92206A6BA00B51A1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922389F82206A6BA00B51A1B /* MapKit.framework */; };
+		923934972210AE6700EDCCC1 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934962210AE6700EDCCC1 /* PopAnimator.swift */; };
+		923934992210E9F600EDCCC1 /* TableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934982210E9F500EDCCC1 /* TableCellModel.swift */; };
 		923DA27E220E9C52008B0929 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923DA27D220E9C52008B0929 /* MyTableViewCell.swift */; };
 		92B0D2B921FBE97D00C4D299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */; };
 		92B0D2BE21FBE97D00C4D299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B0D2BC21FBE97D00C4D299 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		9209EF20220F7FD600046787 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		9222902A220BA55B00162D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922389F82206A6BA00B51A1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		923934962210AE6700EDCCC1 /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
+		923934982210E9F500EDCCC1 /* TableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellModel.swift; sourceTree = "<group>"; };
 		923DA27D220E9C52008B0929 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		92B0D2B521FBE97D00C4D299 /* LTTW_Church_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTTW_Church_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		92B0D2B721FBE97D00C4D299 /* LTTW_Church_app */ = {
 			isa = PBXGroup;
 			children = (
+				923934982210E9F500EDCCC1 /* TableCellModel.swift */,
+				923934962210AE6700EDCCC1 /* PopAnimator.swift */,
 				92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */,
 				92B0D2BC21FBE97D00C4D299 /* Main.storyboard */,
 				92D9EEE2220D056A0022E3E6 /* MainViewController.swift */,
@@ -184,7 +190,9 @@
 				92D9EEE5220D094A0022E3E6 /* EventsViewController.swift in Sources */,
 				92B0D2B921FBE97D00C4D299 /* AppDelegate.swift in Sources */,
 				92D9EEED220D097F0022E3E6 /* AboutUsViewController.swift in Sources */,
+				923934972210AE6700EDCCC1 /* PopAnimator.swift in Sources */,
 				9209EF21220F7FD600046787 /* MenuTableViewCell.swift in Sources */,
+				923934992210E9F600EDCCC1 /* TableCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

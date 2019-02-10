@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    
+    let transition = PopAnimator()
     @IBOutlet weak var tableView: UITableView!
     var collectionData = ["MESSAGES", "EVENTS", "NOTES", "BIBLE", "GET INVOLVED", "ABOUT US"]
+    var myCell = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return collectionData.count
@@ -27,6 +28,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //CHANGE THE LABELS AND PICTURES FOR THE COLLECTION VIEWS
         cell.myImage!.image = UIImage(named: "pic\(indexPath.row+1)")
         cell.myLabel.text = collectionData[indexPath.row]
+        
+        //print(cell.center.y)
+//        print(cell.myLabel.ns)
+//        cell.myLabel.textAlignment = NSTextAlignment.center.rawValue
+//        cell.myLabel.frame(forAlignmentRect: cell.myLabel.frame). = 50
+//        cell.myLabel.textAlignment = .center
+        
+        
+//        cell.myLabel.frame.origin.y = 10
         
         //draw a shadow on the bottow of each row, called from MyTableViewCell.swift
         cell.drawShadow()
@@ -44,6 +54,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        transition.dismissCompletion = {
+            self.tableView!.isHidden = false
+        }
 
     }
     
@@ -55,12 +69,18 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //open the correct view on each tap on home page
         if indexPath.row == 0 {
             let messagesViewController = storyBoard.instantiateViewController(withIdentifier: "MessagesViewController") as! MessagesViewController
+            myCell = indexPath.row
+            messagesViewController.transitioningDelegate = self
             self.present(messagesViewController, animated: true, completion: nil)
         } else if indexPath.row == 1 {
             let eventsViewController = storyBoard.instantiateViewController(withIdentifier: "EventsViewController") as! EventsViewController
+            myCell = indexPath.row
+            eventsViewController.transitioningDelegate = self
             self.present(eventsViewController, animated: true, completion: nil)
         } else if indexPath.row == 2 {
             let notesViewController = storyBoard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
+            myCell = indexPath.row
+            notesViewController.transitioningDelegate = self
             self.present(notesViewController, animated: true, completion: nil)
         } else if indexPath.row == 3 {
             let bibleViewController = storyBoard.instantiateViewController(withIdentifier: "BibleViewController") as! BibleViewController
@@ -73,15 +93,57 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.present(aboutUsViewController, animated: true, completion: nil)
         }
     }
+    
+//    func animationController(forPresented presented: UIViewController, didSelectRowAt indexPath: IndexPath, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        transition.originFrame =
+////            (tableView.cellForRow(at: indexPath)!.superview!.convert(
+////            (tableView!.cellForRow(at: indexPath)!.frame),
+////            to: nil))
+//            //(tableView?.superview!.convert(tableView.cellForRow(at: indexPath)!.frame, to: nil))!
+//        tableView!.superview!.convert(tableView!.frame, to: nil)
+//
+//        transition.presenting = true
+//        //        selectedImage!.isHidden = true
+//        return transition
+//    }
+//
+//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        transition.presenting = false
+//        return transition
+//    }
+    
+//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        transition.originFrame = (tableView!.cellForRow(at: tableView!.indexPathForSelectedRow!)?.superview!
+//            .convert(tableView!.frame, to: nil))!
+////            tableView!.superview!.convert(tableView!.frame, to: nil)
+////                    print(tableView!.indexPathForSelectedRow)
+//
+//        transition.presenting = true
+//        //        selectedImage!.isHidden = true
+//        return transition
+//    }
+//
+//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        transition.presenting = false
+//        return transition
+//    }
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MainViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.originFrame = (tableView!.cellForRow(at: tableView!.indexPathForSelectedRow!)?.superview!
+            .convert(tableView!.frame, to: nil))!
+        //            tableView!.superview!.convert(tableView!.frame, to: nil)
+        //                    print(tableView!.indexPathForSelectedRow)
+        
+        transition.presenting = true
+        tableView!.isHidden = true
+        return transition
     }
-    */
 
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.presenting = false
+        return transition
+    }
 }
