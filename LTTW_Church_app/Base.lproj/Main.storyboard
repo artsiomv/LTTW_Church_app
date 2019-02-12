@@ -266,6 +266,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EmT-6q-ihy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KJD-0J-Csm"/>
                     <connections>
                         <outlet property="tableView" destination="0YR-P4-wV8" id="N4S-je-12S"/>
                     </connections>
@@ -281,9 +282,33 @@
                     <view key="view" contentMode="scaleToFill" id="3jO-zV-4cK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-ur-1uh">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="MESSAGES" id="XWr-oW-vn4">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="RsJ-uD-AzL">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S8Z-ur-1uh" firstAttribute="top" secondItem="9go-NK-C2o" secondAttribute="top" id="NPM-f6-yP6"/>
+                            <constraint firstItem="S8Z-ur-1uh" firstAttribute="leading" secondItem="3jO-zV-4cK" secondAttribute="leading" id="nI6-Cp-QSh"/>
+                            <constraint firstAttribute="trailing" secondItem="S8Z-ur-1uh" secondAttribute="trailing" id="nTB-N5-ivi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9go-NK-C2o"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="RsJ-uD-AzL" id="Epa-ZP-PbE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLP-yC-Lnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,7 +324,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOE-4W-alZ">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
@@ -307,15 +332,12 @@
                                     <navigationItem title="EVENTS" id="YiP-TR-fXI">
                                         <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="RU5-Qj-399">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <segue destination="2jo-0u-MKE" kind="custom" id="A4X-OK-LdU"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mOE-4W-alZ" firstAttribute="leading" secondItem="DM8-ga-jmd" secondAttribute="leading" id="QUj-Ab-WvL"/>
                             <constraint firstAttribute="trailing" secondItem="mOE-4W-alZ" secondAttribute="trailing" id="V6x-iQ-Xc4"/>
@@ -323,27 +345,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JuM-LE-K48"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="RU5-Qj-399" id="3dv-qz-rz3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdP-VB-Xhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4437" y="105"/>
         </scene>
-        <!--Notes View Controller-->
+        <!--Bible View Controller-->
         <scene sceneID="c44-nW-hxQ">
             <objects>
-                <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p9M-7x-tco" customClass="NotesViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BibleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p9M-7x-tco" customClass="BibleViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q3T-Hd-zpu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceK-ip-9Wa">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="NOTES" id="3m1-jg-K8e">
+                                    <navigationItem title="BIBLE" id="3m1-jg-K8e">
                                         <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="aqZ-6l-XSN">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </barButtonItem>
@@ -351,7 +376,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ceK-ip-9Wa" secondAttribute="trailing" id="7DW-5o-pRX"/>
                             <constraint firstItem="ceK-ip-9Wa" firstAttribute="top" secondItem="pbm-zu-YzI" secondAttribute="top" id="9jb-O6-fNb"/>
@@ -359,27 +384,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pbm-zu-YzI"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="aqZ-6l-XSN" id="KkV-5K-leB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="594-B9-MaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3705" y="781"/>
         </scene>
-        <!--Bible View Controller-->
+        <!--Notes View Controller-->
         <scene sceneID="3z6-1Y-Xlj">
             <objects>
-                <viewController storyboardIdentifier="BibleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="li7-AY-fra" customClass="BibleViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="li7-AY-fra" customClass="NotesViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rxw-ue-mJg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvx-4i-TMn">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="BIBLE" id="oSR-J4-nkb">
+                                    <navigationItem title="NOTES" id="oSR-J4-nkb">
                                         <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="32q-wE-Dmy">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </barButtonItem>
@@ -387,7 +415,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Wvx-4i-TMn" secondAttribute="trailing" id="CUg-Hy-cbK"/>
                             <constraint firstItem="Wvx-4i-TMn" firstAttribute="top" secondItem="gWK-gK-W6u" secondAttribute="top" id="i9F-hf-fFx"/>
@@ -395,6 +423,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gWK-gK-W6u"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="32q-wE-Dmy" id="I8Y-rA-8g1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8R-BP-Pp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -410,7 +441,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXr-de-VCF">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
@@ -423,7 +454,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rXr-de-VCF" firstAttribute="top" secondItem="rSd-Dq-OPJ" secondAttribute="top" id="TF5-Ib-gXh"/>
                             <constraint firstItem="rXr-de-VCF" firstAttribute="leading" secondItem="Vvo-iZ-fBL" secondAttribute="leading" id="dQj-R1-GwS"/>
@@ -431,6 +462,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rSd-Dq-OPJ"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="Dwg-r3-1HK" id="ePE-pZ-CWd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyS-BU-DeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -446,7 +480,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATT-OZ-dQL">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <color key="barTintColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
@@ -459,7 +493,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ATT-OZ-dQL" firstAttribute="leading" secondItem="ZmK-Hj-R3z" secondAttribute="leading" id="1k8-Xq-zDC"/>
                             <constraint firstItem="ATT-OZ-dQL" firstAttribute="top" secondItem="6Dx-wB-2ip" secondAttribute="top" id="7F5-5C-x5d"/>
@@ -467,6 +501,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Dx-wB-2ip"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="LdL-dv-Mgq" id="C0N-xy-HEk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjb-PG-fzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -481,6 +518,6 @@
         <image name="pic1" width="6720" height="4480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A4X-OK-LdU"/>
+        <segue reference="48g-SD-IX9"/>
     </inferredMetricsTieBreakers>
 </document>

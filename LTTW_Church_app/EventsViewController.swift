@@ -8,15 +8,22 @@
 
 import UIKit
 
-class EventsViewController: UIViewController {
+class EventsViewController: UIViewController , UIViewControllerTransitioningDelegate{
 
+    
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        backButton.target = self
+        backButton.action = #selector(actionClose)
     }
     
-
+    @objc func actionClose(_ tap: UIBarButtonItem) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

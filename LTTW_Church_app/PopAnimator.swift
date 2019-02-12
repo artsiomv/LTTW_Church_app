@@ -9,7 +9,7 @@
 import UIKit
 
 class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    let duration = 1.0
+    let duration = 0.5
     var presenting = true
     var originFrame = CGRect.zero
     var dismissCompletion: (()->Void)?
@@ -21,41 +21,44 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         let toView = transitionContext.view(forKey: .to)!
-        let herbView = presenting ? toView :
+        let rowView = presenting ? toView :
             transitionContext.view(forKey: .from)!
-        let initialFrame = presenting ? originFrame : herbView.frame
-        let finalFrame = presenting ? herbView.frame : originFrame
+        let initialFrame = presenting ? originFrame : rowView.frame
+        let finalFrame = presenting ? rowView.frame : originFrame
         
         let xScaleFactor = presenting ?
-            
-            initialFrame.width / finalFrame.width :
-            finalFrame.width / initialFrame.width
+            initialFrame.width / finalFrame.width : finalFrame.width / initialFrame.width
         
         let yScaleFactor = presenting ?
-            
-            initialFrame.height / finalFrame.height :
-            finalFrame.height / initialFrame.height
+            initialFrame.height / finalFrame.height : finalFrame.height / initialFrame.height
         
         let scaleTransform = CGAffineTransform(scaleX: xScaleFactor,
                                                y: yScaleFactor)
         
         if presenting {
-            herbView.transform = scaleTransform
-            herbView.center = CGPoint(
+            rowView.transform = scaleTransform
+            rowView.center = CGPoint(
                 x: initialFrame.midX,
                 y: initialFrame.midY)
-            herbView.clipsToBounds = true
+            rowView.clipsToBounds = true
         }
+//        else {
+//            rowView.transform = scaleTransform
+//            rowView.center = CGPoint(
+//                x: initialFrame.midX,
+//                y: initialFrame.midY)
+//            rowView.clipsToBounds = true
+//        }
         
         containerView.addSubview(toView)
-        containerView.bringSubviewToFront(herbView)
+        containerView.bringSubviewToFront(rowView)
         
         UIView.animate(withDuration: duration, delay:0.0,
                        usingSpringWithDamping: 1, initialSpringVelocity: 0.0,
                        animations: {
-                        herbView.transform = self.presenting ?
+                        rowView.transform = self.presenting ?
                             CGAffineTransform.identity : scaleTransform
-                        herbView.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
+                        rowView.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
         },
                        completion: { _ in
                         if !self.presenting {
