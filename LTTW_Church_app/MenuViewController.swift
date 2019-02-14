@@ -27,6 +27,18 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if indexPath.row == 0 {
+            //open the correct view on each tap on home page
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
+            //        messagesViewController.transitioningDelegate = self
+            self.present(viewController, animated: true, completion: nil)
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,6 +17,10 @@
 		92B0D2B921FBE97D00C4D299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */; };
 		92B0D2BE21FBE97D00C4D299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B0D2BC21FBE97D00C4D299 /* Main.storyboard */; };
 		92B0D2C321FBE98100C4D299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B0D2C121FBE98100C4D299 /* LaunchScreen.storyboard */; };
+		92BC80312215149B00387E28 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC80302215149B00387E28 /* UploadViewController.swift */; };
+		92BC8033221532EB00387E28 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC8032221532EB00387E28 /* MessageModel.swift */; };
+		92BC80352215340D00387E28 /* MessageDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC80342215340D00387E28 /* MessageDetailsModel.swift */; };
+		92BC803722153A5200387E28 /* MessageDBmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC803622153A5200387E28 /* MessageDBmodel.swift */; };
 		92D9EEE3220D056A0022E3E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEE2220D056A0022E3E6 /* MainViewController.swift */; };
 		92D9EEE5220D094A0022E3E6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */; };
 		92D9EEE7220D09560022E3E6 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEE6220D09560022E3E6 /* NotesViewController.swift */; };
@@ -39,6 +43,10 @@
 		92B0D2BD21FBE97D00C4D299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92B0D2C221FBE98100C4D299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92B0D2C421FBE98100C4D299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BC80302215149B00387E28 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		92BC8032221532EB00387E28 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		92BC80342215340D00387E28 /* MessageDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailsModel.swift; sourceTree = "<group>"; };
+		92BC803622153A5200387E28 /* MessageDBmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDBmodel.swift; sourceTree = "<group>"; };
 		92D9EEE2220D056A0022E3E6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		92D9EEE6220D09560022E3E6 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -92,10 +100,14 @@
 				923934962210AE6700EDCCC1 /* PopAnimator.swift */,
 				92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */,
 				92B0D2BC21FBE97D00C4D299 /* Main.storyboard */,
+				92BC80302215149B00387E28 /* UploadViewController.swift */,
 				92D9EEE2220D056A0022E3E6 /* MainViewController.swift */,
 				9209EF1E220F7CEC00046787 /* MenuViewController.swift */,
 				9209EF20220F7FD600046787 /* MenuTableViewCell.swift */,
 				92F3A41A220ED2440090E4F1 /* MessagesViewController.swift */,
+				92BC8032221532EB00387E28 /* MessageModel.swift */,
+				92BC803622153A5200387E28 /* MessageDBmodel.swift */,
+				92BC80342215340D00387E28 /* MessageDetailsModel.swift */,
 				92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */,
 				92D9EEE6220D09560022E3E6 /* NotesViewController.swift */,
 				92D9EEE8220D09620022E3E6 /* BibleViewController.swift */,
@@ -180,7 +192,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BC80352215340D00387E28 /* MessageDetailsModel.swift in Sources */,
 				92D9EEEB220D09720022E3E6 /* GetInvolvedViewController.swift in Sources */,
+				92BC80312215149B00387E28 /* UploadViewController.swift in Sources */,
 				9209EF1F220F7CEC00046787 /* MenuViewController.swift in Sources */,
 				923DA27E220E9C52008B0929 /* MyTableViewCell.swift in Sources */,
 				92D9EEE9220D09620022E3E6 /* BibleViewController.swift in Sources */,
@@ -189,6 +203,8 @@
 				92D9EEE7220D09560022E3E6 /* NotesViewController.swift in Sources */,
 				92D9EEE5220D094A0022E3E6 /* EventsViewController.swift in Sources */,
 				92B0D2B921FBE97D00C4D299 /* AppDelegate.swift in Sources */,
+				92BC803722153A5200387E28 /* MessageDBmodel.swift in Sources */,
+				92BC8033221532EB00387E28 /* MessageModel.swift in Sources */,
 				92D9EEED220D097F0022E3E6 /* AboutUsViewController.swift in Sources */,
 				923934972210AE6700EDCCC1 /* PopAnimator.swift in Sources */,
 				9209EF21220F7FD600046787 /* MenuTableViewCell.swift in Sources */,
