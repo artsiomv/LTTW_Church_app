@@ -78,6 +78,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    //animation staff
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.originFrame =
             tableView!.convert(tableView.rectForRow(at: tableView.indexPathForSelectedRow!), to: nil)

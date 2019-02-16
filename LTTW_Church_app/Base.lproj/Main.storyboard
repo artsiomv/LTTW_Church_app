@@ -427,9 +427,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <segue destination="fno-QD-Opn" kind="show" identifier="detailSegue" id="733-k6-l9p"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -462,7 +459,6 @@
         <!--Message Details Model-->
         <scene sceneID="jNS-tx-QqF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E1b-8g-9Tg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MessageDetailsModel" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fno-QD-Opn" customClass="MessageDetailsModel" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cwf-EI-Tzc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -478,23 +474,56 @@
                                     <navigationItem title="ONE" id="QTd-pQ-KCq">
                                         <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="euu-UM-sB6">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <segue destination="gGA-SY-6kR" kind="show" id="dbK-Bh-izt"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoE-ie-rhD">
+                                <rect key="frame" x="30" y="308" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYE-to-mgh">
+                                <rect key="frame" x="30" y="349" width="315" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="emU-Jj-zLQ">
+                                <rect key="frame" x="0.0" y="88" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="AoT-dd-kpB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0OX-la-VMu" firstAttribute="leading" secondItem="Cwf-EI-Tzc" secondAttribute="leading" id="9g7-zP-E7Z"/>
+                            <constraint firstItem="FoE-ie-rhD" firstAttribute="top" secondItem="emU-Jj-zLQ" secondAttribute="bottom" constant="20" id="Kjc-jc-UTc"/>
+                            <constraint firstItem="pIF-ye-PKL" firstAttribute="trailing" secondItem="FoE-ie-rhD" secondAttribute="trailing" constant="30" id="LYx-1Q-C3m"/>
+                            <constraint firstItem="emU-Jj-zLQ" firstAttribute="leading" secondItem="pIF-ye-PKL" secondAttribute="leading" id="LnE-fv-2dX"/>
+                            <constraint firstItem="pIF-ye-PKL" firstAttribute="trailing" secondItem="mYE-to-mgh" secondAttribute="trailing" constant="30" id="Nzi-Zk-zjL"/>
                             <constraint firstItem="0OX-la-VMu" firstAttribute="top" secondItem="pIF-ye-PKL" secondAttribute="top" id="PLe-5v-ajq"/>
                             <constraint firstAttribute="trailing" secondItem="0OX-la-VMu" secondAttribute="trailing" id="TIL-Ni-CSg"/>
+                            <constraint firstItem="mYE-to-mgh" firstAttribute="leading" secondItem="pIF-ye-PKL" secondAttribute="leading" constant="30" id="W7Y-kB-OoO"/>
+                            <constraint firstItem="FoE-ie-rhD" firstAttribute="leading" secondItem="pIF-ye-PKL" secondAttribute="leading" constant="30" id="cCq-JX-RL9"/>
+                            <constraint firstItem="pIF-ye-PKL" firstAttribute="trailing" secondItem="emU-Jj-zLQ" secondAttribute="trailing" id="cuu-4n-Zi4"/>
+                            <constraint firstItem="mYE-to-mgh" firstAttribute="top" secondItem="FoE-ie-rhD" secondAttribute="bottom" constant="20" id="gh6-gy-zev"/>
+                            <constraint firstItem="emU-Jj-zLQ" firstAttribute="top" secondItem="0OX-la-VMu" secondAttribute="bottom" id="zim-GI-2IN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pIF-ye-PKL"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="euu-UM-sB6" id="0TU-dJ-bjL"/>
+                        <outlet property="myBigTitle" destination="QTd-pQ-KCq" id="HeE-KA-pGU"/>
+                        <outlet property="myDescription" destination="mYE-to-mgh" id="2wq-S4-cfR"/>
+                        <outlet property="myTitle" destination="FoE-ie-rhD" id="v4s-Yw-POz"/>
+                        <outlet property="myVideo" destination="emU-Jj-zLQ" id="Cda-m8-bnh"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E1b-8g-9Tg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6226" y="-32"/>
         </scene>
@@ -702,7 +731,6 @@
         <image name="pic1" width="6720" height="4480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dbK-Bh-izt"/>
         <segue reference="48g-SD-IX9"/>
     </inferredMetricsTieBreakers>
 </document>

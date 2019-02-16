@@ -61,18 +61,19 @@ class MessageDBmodel: NSObject, URLSessionDataDelegate {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let message = MessageModel()
+            let message = VideoInfoModel()
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let description = jsonElement["description"] as? String,
-                let filename = jsonElement["filename"] as? String,
-                let fileextension = jsonElement["fileextension"] as? String
+            if let videoDescription = jsonElement["videoDescription"] as? String,
+                let fileName = jsonElement["fileName"] as? String,
+                let fileExtension = jsonElement["fileExtension"] as? String,
+                let title = jsonElement["title"] as? String
             {
-                
-                message.messageDescription = description
-                message.fileName = filename
-                message.fileextension = fileextension
-                print(filename)
+                message.title = title
+                message.videoDescription = videoDescription
+                message.fileName = fileName
+                message.fileExtension = fileExtension
+                print(fileName)
             }
             
             messages.add(message)
