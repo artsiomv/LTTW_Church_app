@@ -15,7 +15,7 @@ protocol MessageDBProtocol: class {
 }
 
 class MessageDBmodel: NSObject, URLSessionDataDelegate {
-
+//    var downloaded = true
     //properties
     
     weak var delegate: MessageDBProtocol!
@@ -30,6 +30,8 @@ class MessageDBmodel: NSObject, URLSessionDataDelegate {
         let task = defaultSession.dataTask(with: url) { (data, response, error) in
             
             if error != nil {
+//                var messages = MessagesViewController()
+//                messages.downloaded = false
                 print("Failed to download data")
             }else {
                 print("Data downloaded")

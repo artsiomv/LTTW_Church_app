@@ -10,7 +10,7 @@ import UIKit
 
 class MessagesViewController: UIViewController, UIViewControllerTransitioningDelegate, UITableViewDataSource, UITableViewDelegate, MessageDBProtocol{
     
-    
+    var downloaded = true
     let transition = PopAnimator()
     var feedItems: NSArray = NSArray()
     var selectedMessage : VideoInfoModel = VideoInfoModel()
@@ -25,6 +25,13 @@ class MessagesViewController: UIViewController, UIViewControllerTransitioningDel
         let messageDBmodel = MessageDBmodel()
         messageDBmodel.delegate = self
         messageDBmodel.downloadItems()
+        
+//        if !downloaded {
+//            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//            print("HIIIIIII")
+//        }
         
         backButton.target = self
         backButton.action = #selector(actionClose)
@@ -46,15 +53,17 @@ class MessagesViewController: UIViewController, UIViewControllerTransitioningDel
     }
     //creates the rows in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
-        let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MessagesCellModel
         // Get the location to be shown
         let item: VideoInfoModel = feedItems[indexPath.row] as! VideoInfoModel
         // Get references to labels of cell
-        myCell.textLabel!.text = item.title
+        cell.myTitle!.text = item.title
         
-        return myCell
+        
+        return cell
     }
 
     

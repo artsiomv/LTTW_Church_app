@@ -8,8 +8,10 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var tableView: UITableView!
+    let transition = PopAnimator()
+    
     var collectionData = ["Home", "Give", "Downloads", "Settings"]
     var collectionImage = ["homeWhite", "giveWhite", "downloadWhite", "settingsWhite"]
     
@@ -36,6 +38,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let viewController = storyBoard.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
             //        messagesViewController.transitioningDelegate = self
             self.present(viewController, animated: true, completion: nil)
+        } else if indexPath.row == 1 {
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "GiveViewController") as! GiveViewController
+            viewController.transitioningDelegate = self
+            self.present(viewController, animated: true, completion: nil)
         }
         
     }
@@ -44,6 +50,21 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    //animation staff
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.originFrame =
+            tableView!.convert(tableView.rectForRow(at: tableView.indexPathForSelectedRow!), to: nil)
+        
+        transition.presenting = true
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.presenting = false
+        return transition
     }
     
     /*

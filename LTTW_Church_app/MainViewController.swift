@@ -52,6 +52,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         //open the correct view on each tap on home page
         if indexPath.row == 0 {
+//            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
             let messagesViewController = storyBoard.instantiateViewController(withIdentifier: "MessagesViewController") as! MessagesViewController
             messagesViewController.transitioningDelegate = self
             self.present(messagesViewController, animated: true, completion: nil)

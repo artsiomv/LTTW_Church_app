@@ -17,7 +17,7 @@ class MessageDetailsModel: UIViewController, UIViewControllerTransitioningDelega
     @IBOutlet weak var myVideo: UIView!
     @IBOutlet weak var myBigTitle: UINavigationItem!
     @IBOutlet weak var myTitle: UILabel!
-    @IBOutlet weak var myDescription: UILabel!
+    @IBOutlet weak var myDescription: UITextView!
     @IBOutlet weak var backButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
