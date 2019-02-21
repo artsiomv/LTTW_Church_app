@@ -11,9 +11,10 @@ import Foundation
 class VideoInfoModel: NSObject {
     //properties
     var title: String?
-    var videoDescription: String?
-    var fileName: String?
-    var fileExtension: String?
+    var videoName: String?
+    var imageName: String?
+    var speaker: String?
+    var dateSpoken: DateComponents?
     
     
     //empty constructor
@@ -25,19 +26,20 @@ class VideoInfoModel: NSObject {
     
     //construct with @name, @address, @latitude, and @longitude parameters
     
-    init(title: String, videoDescription: String, fileName: String, fileExtension: String) {
+    init(title: String, videoName: String, imageName: String, speaker: String, dateSpoken: DateComponents) {
         
         self.title = title
-        self.videoDescription = videoDescription
-        self.fileName = fileName
-        self.fileExtension = fileExtension
+        self.videoName = videoName
+        self.imageName = imageName
+        self.speaker = speaker
+        self.dateSpoken = dateSpoken
     }
     
     
     //prints object's current state
     
-    override var description: String {
-        return "Description: \(String(describing: videoDescription)), Name: \(String(describing: fileName)), FileExtension: \(String(describing: fileExtension)))"
-        
-    }
+//    override var description: String {
+//        return "title: \(String(describing: title)), videoName: \(String(describing: videoName)), imageName: \(String(describing: imageName)), speaker: \(String(describing: speaker))"
+//        
+//    }
 }

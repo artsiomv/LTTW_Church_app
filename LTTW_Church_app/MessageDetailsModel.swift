@@ -12,12 +12,13 @@ import AVKit
 class MessageDetailsModel: UIViewController, UIViewControllerTransitioningDelegate {
 
     var selectedMessage : VideoInfoModel?
-    
+    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    @IBOutlet weak var myDate: UILabel!
     var player:AVPlayer?
     @IBOutlet weak var myVideo: UIView!
     @IBOutlet weak var myBigTitle: UINavigationItem!
     @IBOutlet weak var myTitle: UILabel!
-    @IBOutlet weak var myDescription: UITextView!
+    @IBOutlet weak var mySpeaker: UILabel!
     @IBOutlet weak var backButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +29,21 @@ class MessageDetailsModel: UIViewController, UIViewControllerTransitioningDelega
         backButton.action = #selector(actionClose)
         
         //changing the title on top and on the bottom
-        myBigTitle.title = selectedMessage!.title!
-        myTitle.text = selectedMessage!.title!
+        myBigTitle.title = selectedMessage!.title
+        myTitle.text = selectedMessage!.title
         
+        //set the date
+        let s = selectedMessage!.dateSpoken?.month
+        let str = month[s!] + " " + (selectedMessage!.dateSpoken?.day?.description)! + ", " + (selectedMessage!.dateSpoken?.year?.description)!
+        myDate.text = str
+        
+        mySpeaker.text = selectedMessage!.speaker
         //changing the description
-        myDescription.text = selectedMessage!.videoDescription!
-        myDescription.sizeToFit()
+//        myDescription.text = selectedMessage!.videoDescription!
+//        myDescription.sizeToFit()
         //changing the video *****
         let videoURLString =
-            "http://app.lttwchurch.org/uploads/" + selectedMessage!.fileName!
+            "http://app.lttwchurch.org/uploads/" + selectedMessage!.videoName!
         let url = URL(string: videoURLString)
         player = AVPlayer(url: url!)
         
@@ -44,11 +51,11 @@ class MessageDetailsModel: UIViewController, UIViewControllerTransitioningDelega
         
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
-        
+
         myVideo.addSubview(playerViewController.view)
-        
+
         playerViewController.view.frame = myVideo.bounds
-        
+
         present(playerViewController, animated: true) {
             self.player!.play()
         }
