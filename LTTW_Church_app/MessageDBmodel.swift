@@ -15,7 +15,6 @@ protocol MessageDBProtocol: class {
 }
 
 class MessageDBmodel: NSObject, URLSessionDataDelegate {
-//    var downloaded = true
     //properties
     
     weak var delegate: MessageDBProtocol!
@@ -30,13 +29,10 @@ class MessageDBmodel: NSObject, URLSessionDataDelegate {
         let task = defaultSession.dataTask(with: url) { (data, response, error) in
             
             if error != nil {
-//                var messages = MessagesViewController()
-//                messages.downloaded = false
                 print("Failed to download data")
             }else {
                 print("Data downloaded")
                 self.parseJSON(data!)
-//                print(data!.title)
             }
             
         }
@@ -72,16 +68,11 @@ class MessageDBmodel: NSObject, URLSessionDataDelegate {
             let newDate = myFormatter.date(from: jsonElement["dateSpoken"] as! String)
             let calendar = Calendar.current
             let date = calendar.dateComponents([.year, .month, .day], from: newDate!)
-//            print(date.year!)
-            
-//            var d:DateComponents = date
             //the following insures none of the JsonElement values are nil through optional binding
             if let title = jsonElement["title"] as? String,
                 let videoName = jsonElement["videoName"] as? String,
                 let imageName = jsonElement["imageName"] as? String,
                 let speaker = jsonElement["speaker"] as? String
-//                ,
-//                let dateSpoken = jsonElement["dateSpoken"] as? Date
             {
                 message.title = title
                 message.videoName = videoName

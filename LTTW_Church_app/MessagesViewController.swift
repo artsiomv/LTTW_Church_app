@@ -7,15 +7,19 @@
 //
 
 import UIKit
+//import SQLite3
 
 class MessagesViewController: UIViewController, UIViewControllerTransitioningDelegate, UITableViewDataSource, UITableViewDelegate, MessageDBProtocol{
     
+//    var database: Connection!
+//    var db: OpaquePointer?
     var downloaded = true
     let transition = PopAnimator()
     var feedItems: NSArray = NSArray()
     var selectedMessage : VideoInfoModel = VideoInfoModel()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backButton: UIBarButtonItem!
+//    var selectedMessage : VideoInfoModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +27,50 @@ class MessagesViewController: UIViewController, UIViewControllerTransitioningDel
         self.tableView.dataSource = self
         
         let messageDBmodel = MessageDBmodel()
+//        let sqLiteDB = SQLiteDBManager()
         messageDBmodel.delegate = self
         messageDBmodel.downloadItems()
-        
-//        if !downloaded {
-//            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
-//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//            print("HIIIIIII")
+     
+//        do {
+//            let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+//                .appendingPathComponent("HeroesDatabase.sqlite")
+//
+//            //opening the database
+//            if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
+//                print("error opening database")
+//            }
+//
+//            //creating table
+//            if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS Heroes (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, powerrank INTEGER)", nil, nil, nil) != SQLITE_OK {
+//                let errmsg = String(cString: sqlite3_errmsg(db)!)
+//                print("error creating table: \(errmsg)")
+//            }
+//
+//
+//            //getting values from textfields
+//
+//            //validating that values are not empty
+//
+//            //creating a statement
+//
+//            //the insert query
+//
+//             //preparing the query
+//
+//            //binding the parameters
+//
+//             //executing the query to insert values
+//
+//        } catch {
+//            print(error)
 //        }
         
         backButton.target = self
         backButton.action = #selector(actionClose)
+    }
+    
+    func createTable() {
+        
     }
     
     //what happens when user clicks back button
@@ -61,7 +97,24 @@ class MessagesViewController: UIViewController, UIViewControllerTransitioningDel
         let item: VideoInfoModel = feedItems[indexPath.row] as! VideoInfoModel
         // Get references to labels of cell
         cell.myTitle!.text = item.title
+         let imageURLString = "http://app.lttwchurch.org/uploads/" + item.imageName!
+        let url = URL(string: imageURLString)
+        cell.myPic.load(url: url!)
+//        cell.myPic!.image = load("http://app.lttwchurch.org/uploads/" + item.imageName!)
+//            "http://app.lttwchurch.org/uploads/" + item.imageName!
         
+        
+        
+//        var str = item.title! + "," + item.speaker! + "," + item.dateSpoken
+//        var str2 = item.dateSpoken
+//        print(str2)
+//        let queryString = "INSERT INTO Heroes (title, image, speaker, date) VALUES ("
+//            + item.title! + ","
+//            + cell.myPic!.image + ","
+//            + item.speaker! + ","
+//            + item.dateSpoken! + ")"
+//
+//            print(queryString)
         
         return cell
     }
@@ -123,5 +176,21 @@ class MessagesViewController: UIViewController, UIViewControllerTransitioningDel
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.presenting = false
         return transition
+    }
+    
+    
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }

@@ -33,6 +33,11 @@ class VideoInfoModel: NSObject {
         self.imageName = imageName
         self.speaker = speaker
         self.dateSpoken = dateSpoken
+        
+        
+        //WHAT IF I ADD TO SQLITE HERE?????
+        
+        
     }
     
     

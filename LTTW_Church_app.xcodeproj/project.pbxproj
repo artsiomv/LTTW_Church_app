@@ -22,11 +22,11 @@
 		92BC8033221532EB00387E28 /* VideoInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC8032221532EB00387E28 /* VideoInfoModel.swift */; };
 		92BC80352215340D00387E28 /* MessageDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC80342215340D00387E28 /* MessageDetailsModel.swift */; };
 		92BC803722153A5200387E28 /* MessageDBmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC803622153A5200387E28 /* MessageDBmodel.swift */; };
+		92CC71EA2224CF6200DCAF47 /* SQLiteDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC71E92224CF6200DCAF47 /* SQLiteDBManager.swift */; };
+		92CC71EB2224D77F00DCAF47 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CC71E72224CECC00DCAF47 /* libsqlite3.tbd */; };
 		92D91008221B5639001A6C2C /* MessagesCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D91007221B5639001A6C2C /* MessagesCellModel.swift */; };
 		92D9EEE3220D056A0022E3E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEE2220D056A0022E3E6 /* MainViewController.swift */; };
 		92D9EEE5220D094A0022E3E6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */; };
-		92D9EEE7220D09560022E3E6 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEE6220D09560022E3E6 /* NotesViewController.swift */; };
-		92D9EEE9220D09620022E3E6 /* BibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEE8220D09620022E3E6 /* BibleViewController.swift */; };
 		92D9EEEB220D09720022E3E6 /* GetInvolvedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEEA220D09720022E3E6 /* GetInvolvedViewController.swift */; };
 		92D9EEED220D097F0022E3E6 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEEC220D097F0022E3E6 /* AboutUsViewController.swift */; };
 		92F3A41B220ED2440090E4F1 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F3A41A220ED2440090E4F1 /* MessagesViewController.swift */; };
@@ -50,11 +50,11 @@
 		92BC8032221532EB00387E28 /* VideoInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfoModel.swift; sourceTree = "<group>"; };
 		92BC80342215340D00387E28 /* MessageDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailsModel.swift; sourceTree = "<group>"; };
 		92BC803622153A5200387E28 /* MessageDBmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDBmodel.swift; sourceTree = "<group>"; };
+		92CC71E72224CECC00DCAF47 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		92CC71E92224CF6200DCAF47 /* SQLiteDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDBManager.swift; sourceTree = "<group>"; };
 		92D91007221B5639001A6C2C /* MessagesCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCellModel.swift; sourceTree = "<group>"; };
 		92D9EEE2220D056A0022E3E6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		92D9EEE6220D09560022E3E6 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		92D9EEE8220D09620022E3E6 /* BibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewController.swift; sourceTree = "<group>"; };
 		92D9EEEA220D09720022E3E6 /* GetInvolvedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInvolvedViewController.swift; sourceTree = "<group>"; };
 		92D9EEEC220D097F0022E3E6 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		92F3A41A220ED2440090E4F1 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CC71EB2224D77F00DCAF47 /* libsqlite3.tbd in Frameworks */,
 				922389F92206A6BA00B51A1B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,10 +76,11 @@
 		920837932217A776000CA3D9 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				92CC71E92224CF6200DCAF47 /* SQLiteDBManager.swift */,
+				92BC803622153A5200387E28 /* MessageDBmodel.swift */,
+				92BC8032221532EB00387E28 /* VideoInfoModel.swift */,
 				92F3A41A220ED2440090E4F1 /* MessagesViewController.swift */,
 				92D91007221B5639001A6C2C /* MessagesCellModel.swift */,
-				92BC8032221532EB00387E28 /* VideoInfoModel.swift */,
-				92BC803622153A5200387E28 /* MessageDBmodel.swift */,
 				92BC80342215340D00387E28 /* MessageDetailsModel.swift */,
 			);
 			name = Messages;
@@ -87,6 +89,7 @@
 		922389F72206A6BA00B51A1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92CC71E72224CECC00DCAF47 /* libsqlite3.tbd */,
 				922389F82206A6BA00B51A1B /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -139,8 +142,6 @@
 				92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */,
 				929D7C66221AB7D700E3413F /* Give */,
 				92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */,
-				92D9EEE6220D09560022E3E6 /* NotesViewController.swift */,
-				92D9EEE8220D09620022E3E6 /* BibleViewController.swift */,
 				92D9EEEA220D09720022E3E6 /* GetInvolvedViewController.swift */,
 				92D9EEEC220D097F0022E3E6 /* AboutUsViewController.swift */,
 				92BC80302215149B00387E28 /* UploadViewController.swift */,
@@ -228,10 +229,9 @@
 				92BC80312215149B00387E28 /* UploadViewController.swift in Sources */,
 				9209EF1F220F7CEC00046787 /* MenuViewController.swift in Sources */,
 				923DA27E220E9C52008B0929 /* MyTableViewCell.swift in Sources */,
-				92D9EEE9220D09620022E3E6 /* BibleViewController.swift in Sources */,
+				92CC71EA2224CF6200DCAF47 /* SQLiteDBManager.swift in Sources */,
 				92F3A41B220ED2440090E4F1 /* MessagesViewController.swift in Sources */,
 				92D9EEE3220D056A0022E3E6 /* MainViewController.swift in Sources */,
-				92D9EEE7220D09560022E3E6 /* NotesViewController.swift in Sources */,
 				92D9EEE5220D094A0022E3E6 /* EventsViewController.swift in Sources */,
 				92B0D2B921FBE97D00C4D299 /* AppDelegate.swift in Sources */,
 				92BC803722153A5200387E28 /* MessageDBmodel.swift in Sources */,

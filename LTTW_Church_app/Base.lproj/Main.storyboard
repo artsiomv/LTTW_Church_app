@@ -435,7 +435,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrowWhite" translatesAutoresizingMaskIntoConstraints="NO" id="qH4-DC-b8S">
                                                     <rect key="frame" x="332.66666666666669" y="30" width="37.333333333333314" height="19.666666666666671"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="vx6-p4-wby">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="vx6-p4-wby">
                                                     <rect key="frame" x="5" y="9.9999999999999964" width="107" height="59.666666666666657"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="107" id="KQq-FV-4Gj"/>
@@ -677,84 +677,6 @@
             </objects>
             <point key="canvasLocation" x="2586" y="803"/>
         </scene>
-        <!--Bible View Controller-->
-        <scene sceneID="c44-nW-hxQ">
-            <objects>
-                <viewController storyboardIdentifier="BibleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p9M-7x-tco" customClass="BibleViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="q3T-Hd-zpu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceK-ip-9Wa">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="BIBLE" id="3m1-jg-K8e">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="aqZ-6l-XSN">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ceK-ip-9Wa" secondAttribute="trailing" id="7DW-5o-pRX"/>
-                            <constraint firstItem="ceK-ip-9Wa" firstAttribute="top" secondItem="pbm-zu-YzI" secondAttribute="top" id="9jb-O6-fNb"/>
-                            <constraint firstItem="ceK-ip-9Wa" firstAttribute="leading" secondItem="q3T-Hd-zpu" secondAttribute="leading" id="h5j-AQ-BGb"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="pbm-zu-YzI"/>
-                    </view>
-                    <connections>
-                        <outlet property="backButton" destination="aqZ-6l-XSN" id="KkV-5K-leB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="594-B9-MaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3705" y="781"/>
-        </scene>
-        <!--Notes View Controller-->
-        <scene sceneID="3z6-1Y-Xlj">
-            <objects>
-                <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="li7-AY-fra" customClass="NotesViewController" customModule="LTTW_Church_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rxw-ue-mJg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvx-4i-TMn">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="NOTES" id="oSR-J4-nkb">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu Button" image="arrowBackWhite" id="32q-wE-Dmy">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wvx-4i-TMn" secondAttribute="trailing" id="CUg-Hy-cbK"/>
-                            <constraint firstItem="Wvx-4i-TMn" firstAttribute="top" secondItem="gWK-gK-W6u" secondAttribute="top" id="i9F-hf-fFx"/>
-                            <constraint firstItem="Wvx-4i-TMn" firstAttribute="leading" secondItem="Rxw-ue-mJg" secondAttribute="leading" id="p08-kC-jsT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="gWK-gK-W6u"/>
-                    </view>
-                    <connections>
-                        <outlet property="backButton" destination="32q-wE-Dmy" id="I8Y-rA-8g1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I8R-BP-Pp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4436" y="780"/>
-        </scene>
         <!--Get Involved View Controller-->
         <scene sceneID="khB-5p-RzL">
             <objects>
@@ -792,7 +714,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyS-BU-DeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3705" y="1459"/>
+            <point key="canvasLocation" x="3724" y="819"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="WoB-IN-u3q">
@@ -831,7 +753,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjb-PG-fzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4436" y="1459"/>
+            <point key="canvasLocation" x="4462" y="820"/>
         </scene>
     </scenes>
     <resources>
