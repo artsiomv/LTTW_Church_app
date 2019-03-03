@@ -10,7 +10,6 @@
 		9209EF1F220F7CEC00046787 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209EF1E220F7CEC00046787 /* MenuViewController.swift */; };
 		9209EF21220F7FD600046787 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209EF20220F7FD600046787 /* MenuTableViewCell.swift */; };
 		9222902B220BA55C00162D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9222902A220BA55B00162D6A /* Assets.xcassets */; };
-		922389F92206A6BA00B51A1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922389F82206A6BA00B51A1B /* MapKit.framework */; };
 		923934972210AE6700EDCCC1 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934962210AE6700EDCCC1 /* PopAnimator.swift */; };
 		923934992210E9F600EDCCC1 /* TableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934982210E9F500EDCCC1 /* TableCellModel.swift */; };
 		923DA27E220E9C52008B0929 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923DA27D220E9C52008B0929 /* MyTableViewCell.swift */; };
@@ -36,7 +35,7 @@
 		9209EF1E220F7CEC00046787 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9209EF20220F7FD600046787 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		9222902A220BA55B00162D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		922389F82206A6BA00B51A1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		923344B4222BB7860064FE31 /* LTTW_Church_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LTTW_Church_app.entitlements; sourceTree = "<group>"; };
 		923934962210AE6700EDCCC1 /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		923934982210E9F500EDCCC1 /* TableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellModel.swift; sourceTree = "<group>"; };
 		923DA27D220E9C52008B0929 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CC71EB2224D77F00DCAF47 /* libsqlite3.tbd in Frameworks */,
-				922389F92206A6BA00B51A1B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				92CC71E72224CECC00DCAF47 /* libsqlite3.tbd */,
-				922389F82206A6BA00B51A1B /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,6 +132,7 @@
 		92B0D2B721FBE97D00C4D299 /* LTTW_Church_app */ = {
 			isa = PBXGroup;
 			children = (
+				923344B4222BB7860064FE31 /* LTTW_Church_app.entitlements */,
 				92B0D2BC21FBE97D00C4D299 /* Main.storyboard */,
 				929D7C67221ACAFA00E3413F /* Main */,
 				920837932217A776000CA3D9 /* Messages */,
@@ -184,6 +182,14 @@
 				TargetAttributes = {
 					92B0D2B421FBE97D00C4D299 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

@@ -14,6 +14,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let transition = PopAnimator()
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rows.count
     }
@@ -53,9 +56,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         //open the correct view on each tap on home page
         if indexPath.row == 0 {
-//            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
-//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
             let messagesViewController = storyBoard.instantiateViewController(withIdentifier: "MessagesViewController") as! MessagesViewController
             messagesViewController.transitioningDelegate = self
             self.present(messagesViewController, animated: true, completion: nil)
@@ -63,19 +63,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let eventsViewController = storyBoard.instantiateViewController(withIdentifier: "EventsViewController") as! EventsViewController
             eventsViewController.transitioningDelegate = self
             self.present(eventsViewController, animated: true, completion: nil)
-        } else if indexPath.row == 2 {
-            let bibleViewController = storyBoard.instantiateViewController(withIdentifier: "BibleViewController") as! BibleViewController
-            bibleViewController.transitioningDelegate = self
-            self.present(bibleViewController, animated: true, completion: nil)
-        } else if indexPath.row == 3 {
-            let notesViewController = storyBoard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
-            notesViewController.transitioningDelegate = self
-            self.present(notesViewController, animated: true, completion: nil)
-        } else if indexPath.row == 4 {
+        }  else if indexPath.row == 2 {
             let getInvolvedViewController = storyBoard.instantiateViewController(withIdentifier: "GetInvolvedViewController") as! GetInvolvedViewController
             getInvolvedViewController.transitioningDelegate = self
             self.present(getInvolvedViewController, animated: true, completion: nil)
-        } else if indexPath.row == 5 {
+        } else if indexPath.row == 3 {
             let aboutUsViewController = storyBoard.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
             aboutUsViewController.transitioningDelegate = self
             self.present(aboutUsViewController, animated: true, completion: nil)
