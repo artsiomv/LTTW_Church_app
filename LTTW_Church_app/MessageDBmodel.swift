@@ -70,12 +70,12 @@ class MessageDBmodel: NSObject, URLSessionDataDelegate {
             let date = calendar.dateComponents([.year, .month, .day], from: newDate!)
             //the following insures none of the JsonElement values are nil through optional binding
             if let title = jsonElement["title"] as? String,
-                let videoName = jsonElement["videoName"] as? String,
+                let videoURL = jsonElement["videoURL"] as? String,
                 let imageName = jsonElement["imageName"] as? String,
                 let speaker = jsonElement["speaker"] as? String
             {
                 message.title = title
-                message.videoName = videoName
+                message.videoURL = videoURL
                 message.imageName = imageName
                 message.speaker = speaker
                 message.dateSpoken = date

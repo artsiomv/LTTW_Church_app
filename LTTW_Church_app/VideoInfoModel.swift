@@ -11,7 +11,7 @@ import Foundation
 class VideoInfoModel: NSObject {
     //properties
     var title: String?
-    var videoName: String?
+    var videoURL: String?
     var imageName: String?
     var speaker: String?
     var dateSpoken: DateComponents?
@@ -26,10 +26,10 @@ class VideoInfoModel: NSObject {
     
     //construct with @name, @address, @latitude, and @longitude parameters
     
-    init(title: String, videoName: String, imageName: String, speaker: String, dateSpoken: DateComponents) {
+    init(title: String, videoURL: String, imageName: String, speaker: String, dateSpoken: DateComponents) {
         
         self.title = title
-        self.videoName = videoName
+        self.videoURL = videoURL
         self.imageName = imageName
         self.speaker = speaker
         self.dateSpoken = dateSpoken

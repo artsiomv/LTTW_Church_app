@@ -72,7 +72,7 @@ class MessagesViewController: UIViewController, UIViewControllerTransitioningDel
     func createTable() {
         
     }
-    
+
     //what happens when user clicks back button
     @objc func actionClose(_ tap: UIBarButtonItem) {
         presentingViewController?.dismiss(animated: true, completion: nil)

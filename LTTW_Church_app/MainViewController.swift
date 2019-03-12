@@ -11,11 +11,24 @@ let rows = TableCellModel.all()
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate{
     
+//    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     let transition = PopAnimator()
     @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var menuLabel: UILabel!
     
     
-    
+//    @IBAction func menuButton(_ sender: Any) {
+//
+//        self.view.bringSubviewToFront(secondView)
+//        let originalTransform = self.secondView.transform
+////        let scaledTransform = originalTransform.scaledBy(x: 0.2, y: 0.2)
+//        let scaledAndTranslatedTransform = originalTransform.translatedBy(x: self.view.frame.maxX * 0.6, y: 0)
+//        UIView.animate(withDuration: 0.7, animations: {
+//            self.secondView.transform = scaledAndTranslatedTransform
+////            self.menuLabel.transform = scaledAndTranslatedTransform
+//        })
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rows.count
@@ -47,6 +60,18 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        var startX = self.view.frame.minX
+//         var startY = self.view.frame.minX
+//        var width = self.view.frame.maxX * 0.6
+//        var height = self.view.frame.maxY
+//        secondView.frame = CGRect(
+//            x: self.view.frame.minX - self.view.frame.maxX * 0.6,
+//            y: self.view.frame.minY,
+//            width: self.view.frame.maxX * 0.6,
+//            height: self.view.frame.maxY )
+        
+        //LABEL
+//        menuLabel.frame = CGRect(x: secondView.frame.midX, y: secondView.frame.midY, width: 50, height: 50)
     }
     
     //handle onTap events for each row

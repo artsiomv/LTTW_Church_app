@@ -9,7 +9,6 @@
 import UIKit
 
 class EventsViewController: UIViewController , UIViewControllerTransitioningDelegate{
-
     
     @IBOutlet weak var backButton: UIBarButtonItem!
     

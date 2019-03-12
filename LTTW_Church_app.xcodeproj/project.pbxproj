@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9209EF1F220F7CEC00046787 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209EF1E220F7CEC00046787 /* MenuViewController.swift */; };
-		9209EF21220F7FD600046787 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209EF20220F7FD600046787 /* MenuTableViewCell.swift */; };
 		9222902B220BA55C00162D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9222902A220BA55B00162D6A /* Assets.xcassets */; };
 		923934972210AE6700EDCCC1 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934962210AE6700EDCCC1 /* PopAnimator.swift */; };
 		923934992210E9F600EDCCC1 /* TableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934982210E9F500EDCCC1 /* TableCellModel.swift */; };
 		923DA27E220E9C52008B0929 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923DA27D220E9C52008B0929 /* MyTableViewCell.swift */; };
 		9287A258221AB38D00A2119F /* GiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287A257221AB38D00A2119F /* GiveViewController.swift */; };
+		929DAD65222E02570085AB81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 929DAD64222E02560085AB81 /* Default-568h@2x.png */; };
 		92B0D2B921FBE97D00C4D299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */; };
 		92B0D2BE21FBE97D00C4D299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B0D2BC21FBE97D00C4D299 /* Main.storyboard */; };
 		92B0D2C321FBE98100C4D299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B0D2C121FBE98100C4D299 /* LaunchScreen.storyboard */; };
-		92BC80312215149B00387E28 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC80302215149B00387E28 /* UploadViewController.swift */; };
 		92BC8033221532EB00387E28 /* VideoInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC8032221532EB00387E28 /* VideoInfoModel.swift */; };
 		92BC80352215340D00387E28 /* MessageDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC80342215340D00387E28 /* MessageDetailsModel.swift */; };
 		92BC803722153A5200387E28 /* MessageDBmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC803622153A5200387E28 /* MessageDBmodel.swift */; };
@@ -32,20 +30,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9209EF1E220F7CEC00046787 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		9209EF20220F7FD600046787 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		9222902A220BA55B00162D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		923344B4222BB7860064FE31 /* LTTW_Church_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LTTW_Church_app.entitlements; sourceTree = "<group>"; };
 		923934962210AE6700EDCCC1 /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		923934982210E9F500EDCCC1 /* TableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellModel.swift; sourceTree = "<group>"; };
 		923DA27D220E9C52008B0929 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		9287A257221AB38D00A2119F /* GiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveViewController.swift; sourceTree = "<group>"; };
+		929DAD64222E02560085AB81 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		92B0D2B521FBE97D00C4D299 /* LTTW_Church_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTTW_Church_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92B0D2BD21FBE97D00C4D299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92B0D2C221FBE98100C4D299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92B0D2C421FBE98100C4D299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92BC80302215149B00387E28 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		92BC8032221532EB00387E28 /* VideoInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfoModel.swift; sourceTree = "<group>"; };
 		92BC80342215340D00387E28 /* MessageDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailsModel.swift; sourceTree = "<group>"; };
 		92BC803622153A5200387E28 /* MessageDBmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDBmodel.swift; sourceTree = "<group>"; };
@@ -92,16 +88,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		929D7C66221AB7D700E3413F /* Give */ = {
-			isa = PBXGroup;
-			children = (
-				9287A257221AB38D00A2119F /* GiveViewController.swift */,
-				9209EF1E220F7CEC00046787 /* MenuViewController.swift */,
-				9209EF20220F7FD600046787 /* MenuTableViewCell.swift */,
-			);
-			name = Give;
-			sourceTree = "<group>";
-		};
 		929D7C67221ACAFA00E3413F /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +101,7 @@
 		92B0D2AC21FBE97D00C4D299 = {
 			isa = PBXGroup;
 			children = (
+				929DAD64222E02560085AB81 /* Default-568h@2x.png */,
 				92B0D2B721FBE97D00C4D299 /* LTTW_Church_app */,
 				92B0D2B621FBE97D00C4D299 /* Products */,
 				922389F72206A6BA00B51A1B /* Frameworks */,
@@ -138,11 +125,10 @@
 				920837932217A776000CA3D9 /* Messages */,
 				923934962210AE6700EDCCC1 /* PopAnimator.swift */,
 				92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */,
-				929D7C66221AB7D700E3413F /* Give */,
+				9287A257221AB38D00A2119F /* GiveViewController.swift */,
 				92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */,
 				92D9EEEA220D09720022E3E6 /* GetInvolvedViewController.swift */,
 				92D9EEEC220D097F0022E3E6 /* AboutUsViewController.swift */,
-				92BC80302215149B00387E28 /* UploadViewController.swift */,
 				92B0D2C121FBE98100C4D299 /* LaunchScreen.storyboard */,
 				92B0D2C421FBE98100C4D299 /* Info.plist */,
 				9222902A220BA55B00162D6A /* Assets.xcassets */,
@@ -217,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B0D2C321FBE98100C4D299 /* LaunchScreen.storyboard in Resources */,
+				929DAD65222E02570085AB81 /* Default-568h@2x.png in Resources */,
 				9222902B220BA55C00162D6A /* Assets.xcassets in Resources */,
 				92B0D2BE21FBE97D00C4D299 /* Main.storyboard in Resources */,
 			);
@@ -232,8 +219,6 @@
 				92BC80352215340D00387E28 /* MessageDetailsModel.swift in Sources */,
 				9287A258221AB38D00A2119F /* GiveViewController.swift in Sources */,
 				92D9EEEB220D09720022E3E6 /* GetInvolvedViewController.swift in Sources */,
-				92BC80312215149B00387E28 /* UploadViewController.swift in Sources */,
-				9209EF1F220F7CEC00046787 /* MenuViewController.swift in Sources */,
 				923DA27E220E9C52008B0929 /* MyTableViewCell.swift in Sources */,
 				92CC71EA2224CF6200DCAF47 /* SQLiteDBManager.swift in Sources */,
 				92F3A41B220ED2440090E4F1 /* MessagesViewController.swift in Sources */,
@@ -245,7 +230,6 @@
 				92D9EEED220D097F0022E3E6 /* AboutUsViewController.swift in Sources */,
 				92D91008221B5639001A6C2C /* MessagesCellModel.swift in Sources */,
 				923934972210AE6700EDCCC1 /* PopAnimator.swift in Sources */,
-				9209EF21220F7FD600046787 /* MenuTableViewCell.swift in Sources */,
 				923934992210E9F600EDCCC1 /* TableCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
