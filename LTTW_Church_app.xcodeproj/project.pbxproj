@@ -26,6 +26,18 @@
 		92D9EEE5220D094A0022E3E6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */; };
 		92D9EEEB220D09720022E3E6 /* GetInvolvedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEEA220D09720022E3E6 /* GetInvolvedViewController.swift */; };
 		92D9EEED220D097F0022E3E6 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9EEEC220D097F0022E3E6 /* AboutUsViewController.swift */; };
+		92E07017223B112E007B3CFE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E07016223B112E007B3CFE /* SettingsViewController.swift */; };
+		92E0701A223B11F1007B3CFE /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E07019223B11F1007B3CFE /* SettingsModel.swift */; };
+		92E0701C223B1575007B3CFE /* SettingsTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0701B223B1575007B3CFE /* SettingsTableViewCellModel.swift */; };
+		92E0701E223B2904007B3CFE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0701D223B2904007B3CFE /* LogInViewController.swift */; };
+		92E07020223B2E3E007B3CFE /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0701F223B2E3E007B3CFE /* NotificationsViewController.swift */; };
+		92E07022223B2E50007B3CFE /* DoNotDisturbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E07021223B2E50007B3CFE /* DoNotDisturbViewController.swift */; };
+		92E07024223B2E61007B3CFE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E07023223B2E61007B3CFE /* AboutViewController.swift */; };
+		92E0702C223CDCA3007B3CFE /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0702B223CDCA3007B3CFE /* AddEventViewController.swift */; };
+		92E0702E223CDCB0007B3CFE /* AddVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0702D223CDCB0007B3CFE /* AddVideoViewController.swift */; };
+		92E07034223D729F007B3CFE /* DangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E07033223D729F007B3CFE /* DangerViewController.swift */; };
+		92E07036223D9ED7007B3CFE /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E07035223D9ED7007B3CFE /* UserDBModel.swift */; };
+		92E07038223D9EFA007B3CFE /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E07037223D9EFA007B3CFE /* UserInfoModel.swift */; };
 		92F3A41B220ED2440090E4F1 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F3A41A220ED2440090E4F1 /* MessagesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +64,18 @@
 		92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		92D9EEEA220D09720022E3E6 /* GetInvolvedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInvolvedViewController.swift; sourceTree = "<group>"; };
 		92D9EEEC220D097F0022E3E6 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		92E07016223B112E007B3CFE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		92E07019223B11F1007B3CFE /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		92E0701B223B1575007B3CFE /* SettingsTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCellModel.swift; sourceTree = "<group>"; };
+		92E0701D223B2904007B3CFE /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		92E0701F223B2E3E007B3CFE /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		92E07021223B2E50007B3CFE /* DoNotDisturbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotDisturbViewController.swift; sourceTree = "<group>"; };
+		92E07023223B2E61007B3CFE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		92E0702B223CDCA3007B3CFE /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		92E0702D223CDCB0007B3CFE /* AddVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVideoViewController.swift; sourceTree = "<group>"; };
+		92E07033223D729F007B3CFE /* DangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerViewController.swift; sourceTree = "<group>"; };
+		92E07035223D9ED7007B3CFE /* UserDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
+		92E07037223D9EFA007B3CFE /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		92F3A41A220ED2440090E4F1 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,10 +94,10 @@
 		920837932217A776000CA3D9 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				92F3A41A220ED2440090E4F1 /* MessagesViewController.swift */,
 				92CC71E92224CF6200DCAF47 /* SQLiteDBManager.swift */,
 				92BC803622153A5200387E28 /* MessageDBmodel.swift */,
 				92BC8032221532EB00387E28 /* VideoInfoModel.swift */,
-				92F3A41A220ED2440090E4F1 /* MessagesViewController.swift */,
 				92D91007221B5639001A6C2C /* MessagesCellModel.swift */,
 				92BC80342215340D00387E28 /* MessageDetailsModel.swift */,
 			);
@@ -124,6 +148,7 @@
 				929D7C67221ACAFA00E3413F /* Main */,
 				920837932217A776000CA3D9 /* Messages */,
 				923934962210AE6700EDCCC1 /* PopAnimator.swift */,
+				92E07018223B1136007B3CFE /* Settings */,
 				92B0D2B821FBE97D00C4D299 /* AppDelegate.swift */,
 				9287A257221AB38D00A2119F /* GiveViewController.swift */,
 				92D9EEE4220D094A0022E3E6 /* EventsViewController.swift */,
@@ -134,6 +159,25 @@
 				9222902A220BA55B00162D6A /* Assets.xcassets */,
 			);
 			path = LTTW_Church_app;
+			sourceTree = "<group>";
+		};
+		92E07018223B1136007B3CFE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				92E07016223B112E007B3CFE /* SettingsViewController.swift */,
+				92E0702B223CDCA3007B3CFE /* AddEventViewController.swift */,
+				92E0702D223CDCB0007B3CFE /* AddVideoViewController.swift */,
+				92E0701B223B1575007B3CFE /* SettingsTableViewCellModel.swift */,
+				92E07019223B11F1007B3CFE /* SettingsModel.swift */,
+				92E0701D223B2904007B3CFE /* LogInViewController.swift */,
+				92E07033223D729F007B3CFE /* DangerViewController.swift */,
+				92E0701F223B2E3E007B3CFE /* NotificationsViewController.swift */,
+				92E07021223B2E50007B3CFE /* DoNotDisturbViewController.swift */,
+				92E07023223B2E61007B3CFE /* AboutViewController.swift */,
+				92E07037223D9EFA007B3CFE /* UserInfoModel.swift */,
+				92E07035223D9ED7007B3CFE /* UserDBModel.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,19 +261,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				92BC80352215340D00387E28 /* MessageDetailsModel.swift in Sources */,
+				92E0702C223CDCA3007B3CFE /* AddEventViewController.swift in Sources */,
 				9287A258221AB38D00A2119F /* GiveViewController.swift in Sources */,
+				92E07036223D9ED7007B3CFE /* UserDBModel.swift in Sources */,
+				92E07024223B2E61007B3CFE /* AboutViewController.swift in Sources */,
+				92E0701A223B11F1007B3CFE /* SettingsModel.swift in Sources */,
 				92D9EEEB220D09720022E3E6 /* GetInvolvedViewController.swift in Sources */,
 				923DA27E220E9C52008B0929 /* MyTableViewCell.swift in Sources */,
 				92CC71EA2224CF6200DCAF47 /* SQLiteDBManager.swift in Sources */,
 				92F3A41B220ED2440090E4F1 /* MessagesViewController.swift in Sources */,
 				92D9EEE3220D056A0022E3E6 /* MainViewController.swift in Sources */,
+				92E07017223B112E007B3CFE /* SettingsViewController.swift in Sources */,
 				92D9EEE5220D094A0022E3E6 /* EventsViewController.swift in Sources */,
+				92E07022223B2E50007B3CFE /* DoNotDisturbViewController.swift in Sources */,
 				92B0D2B921FBE97D00C4D299 /* AppDelegate.swift in Sources */,
 				92BC803722153A5200387E28 /* MessageDBmodel.swift in Sources */,
 				92BC8033221532EB00387E28 /* VideoInfoModel.swift in Sources */,
+				92E07038223D9EFA007B3CFE /* UserInfoModel.swift in Sources */,
 				92D9EEED220D097F0022E3E6 /* AboutUsViewController.swift in Sources */,
 				92D91008221B5639001A6C2C /* MessagesCellModel.swift in Sources */,
+				92E07034223D729F007B3CFE /* DangerViewController.swift in Sources */,
+				92E0702E223CDCB0007B3CFE /* AddVideoViewController.swift in Sources */,
+				92E07020223B2E3E007B3CFE /* NotificationsViewController.swift in Sources */,
 				923934972210AE6700EDCCC1 /* PopAnimator.swift in Sources */,
+				92E0701C223B1575007B3CFE /* SettingsTableViewCellModel.swift in Sources */,
+				92E0701E223B2904007B3CFE /* LogInViewController.swift in Sources */,
 				923934992210E9F600EDCCC1 /* TableCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

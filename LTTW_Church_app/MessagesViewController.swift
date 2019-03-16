@@ -13,7 +13,7 @@ class MessagesViewController: UIViewController, UIViewControllerTransitioningDel
     
 //    var database: Connection!
 //    var db: OpaquePointer?
-    var downloaded = true
+//    var downloaded = true
     let transition = PopAnimator()
     var feedItems: NSArray = NSArray()
     var selectedMessage : VideoInfoModel = VideoInfoModel()
