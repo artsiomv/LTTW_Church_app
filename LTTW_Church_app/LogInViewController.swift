@@ -5,54 +5,24 @@
 //  Created by Artiom on 3/14/19.
 //  Copyright © 2019 Artiom. All rights reserved.
 //
-
 import UIKit
-class LogInViewController: UIViewController, UIViewControllerTransitioningDelegate, UserDBProtocol {
-    
-    
-    var feedItems: NSArray = NSArray()
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var loginInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var errorMessage: UILabel!
-    
-    func itemsDownloaded(items: NSArray) {
-        feedItems = items
-    }
-   
-    @IBAction func onClick(_ sender: Any) {
-        errorMessage.text = ""
-        //TODO encrypt password
+import WebKit
 
-        if(loginInput.text! == "" || passwordInput.text! == "") {
-            errorMessage.text = "Username or password is missing"
-        } else {
-            //need to download data here
-            errorMessage.text = "Loading..."
-            let item: UserInfoModel = feedItems[0] as! UserInfoModel
-            if item.login! == loginInput.text! && item.password! == passwordInput.text! {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                
-                let viewController = storyBoard.instantiateViewController(withIdentifier: "DangerViewController") as! DangerViewController
-                viewController.transitioningDelegate = self
-                self.present(viewController, animated: true, completion: nil)
-            } else {
-                errorMessage.text = "Login or password is incorrect"
-            }
-        }
-    }
+class LogInViewController: UIViewController, UIViewControllerTransitioningDelegate, WKNavigationDelegate {
+    
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    
+    @IBOutlet weak var myWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        myWebView.navigationDelegate = self
         // Do any additional setup after loading the view.
         backButton.target = self
         backButton.action = #selector(actionClose)
         
-        let userDBmodel = UserDBModel()
-        userDBmodel.delegate = self
-        userDBmodel.downloadItems()
+        let url = URL(string: "https://www.app.lttwchurch.org/LTTW_app_php/")
+        myWebView.load(URLRequest(url: url!))
     }
     
     //what happens when user clicks back button

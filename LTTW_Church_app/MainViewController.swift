@@ -74,9 +74,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             getInvolvedViewController.transitioningDelegate = self
             self.present(getInvolvedViewController, animated: true, completion: nil)
         } else if indexPath.row == 3 {
-            let aboutUsViewController = storyBoard.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
-            aboutUsViewController.transitioningDelegate = self
-            self.present(aboutUsViewController, animated: true, completion: nil)
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "GiveViewController") as! GiveViewController
+            viewController.transitioningDelegate = self
+            self.present(viewController, animated: true, completion: nil)
+        } else if indexPath.row == 4 {
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
+            viewController.transitioningDelegate = self
+            self.present(viewController, animated: true, completion: nil)
         }
     }
     

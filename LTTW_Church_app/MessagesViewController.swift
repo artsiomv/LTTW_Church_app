@@ -97,7 +97,7 @@ class MessagesViewController: UIViewController, UIViewControllerTransitioningDel
         let item: VideoInfoModel = feedItems[indexPath.row] as! VideoInfoModel
         // Get references to labels of cell
         cell.myTitle!.text = item.title
-         let imageURLString = "http://app.lttwchurch.org/uploads/" + item.imageName!
+        let imageURLString = "http://app.lttwchurch.org/uploads/" + item.imageName!
         let url = URL(string: imageURLString)
         cell.myPic.load(url: url!)
 //        cell.myPic!.image = load("http://app.lttwchurch.org/uploads/" + item.imageName!)
